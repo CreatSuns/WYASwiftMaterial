@@ -1,0 +1,6 @@
+framework module Pods_WYASwiftMaterial {
+  umbrella header "Pods-WYASwiftMaterial-umbrella.h"
+
+  export *
+  module * { export * }
+}
