@@ -26,9 +26,9 @@ PODS:
   - GPUImage (0.1.7)
   - JQFMDB (1.1.6):
     - FMDB
-  - Kingfisher (4.6.1)
+  - Kingfisher (4.6.4)
   - Masonry (1.1.0)
-  - MJRefresh (3.1.15.1)
+  - MJRefresh (3.1.15.7)
   - NTYAmrConverter (0.1.0)
   - Realm (3.15.0):
     - Realm/Headers (= 3.15.0)
@@ -36,14 +36,14 @@ PODS:
   - SDWebImage (5.0.3):
     - SDWebImage/Core (= 5.0.3)
   - SDWebImage/Core (5.0.3)
-  - SnapKit (4.0.0)
-  - SQLite.swift (0.11.4):
-    - SQLite.swift/standard (= 0.11.4)
-  - SQLite.swift/standard (0.11.4)
+  - SnapKit (4.0.1)
+  - SQLite.swift (0.11.6):
+    - SQLite.swift/standard (= 0.11.6)
+  - SQLite.swift/standard (0.11.6)
   - SSKeychain (1.4.1)
   - SVGKit (2.1.1):
     - CocoaLumberjack (~> 3.0)
-  - SVProgressHUD (2.2.2)
+  - SVProgressHUD (2.2.5)
   - WYAKit (0.1.36):
     - AFNetworking
     - AliyunOSSiOS
@@ -120,17 +120,17 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   JQFMDB: 39ab0d6d7c26fd30e51c4dd92edcb27506a34c3a
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   NTYAmrConverter: 0cd46d044576b1985f9879b4e5164aa25500b658
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SQLite.swift: 46d890be8601964454bd3392527f863d1b802d45
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   SVGKit: 652cdf7bef8bec8564d04a8511d3ab50c7595fac
-  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   WYAKit: 04510769d8a2fe0f7aee4d7253322b9641d4e361
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: 5d1dc899cecd5946e5a758a0c3997704a4b48d01

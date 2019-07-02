@@ -14,7 +14,7 @@ class WYALoginModel: BaseNetWork {
                       "pwd":password,
                       "device_type":1,
                       "device_token":"",
-                      "timestamp":NSString.getNowTimeTimesSeconds(),
+                      "timestamp":NSDate.getNowTimeTimesSeconds(),
                       "nonce_str":NSString.wya_randomString(withLength: 32)] as [String : Any]
 
         WYALoginModel.requestData(.post, URLString: loginUrl, paramenters: params) { (result) in

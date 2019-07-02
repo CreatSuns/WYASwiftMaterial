@@ -555,7 +555,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial-resources.sh",
-				"${PODS_ROOT}/../../GitProject/第三方库开发/WYAKit/WYAKit/Assets/Pusab.ttf",
+				"${PODS_ROOT}/../../第三方库开发/WYAKit/WYAKit/Assets/Pusab.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WYAKit/WYAKit.bundle",
 			);
 			name = "[CP] Copy Pods Resources";

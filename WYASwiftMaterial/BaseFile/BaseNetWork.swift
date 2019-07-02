@@ -74,10 +74,10 @@ extension BaseNetWork {
                 }
             }
         }
-        let resultString = arr.joined(separator: "&") as String
+        let resultString = arr.joined(separator: "&") as NSString
         print(resultString)
-        let md5String = NSString.wya_md5(with: resultString)
+        let md5String = NSString.wya_md5With(resultString)() as String
 
-        return md5String ?? ""
+        return md5String 
     }
 }
