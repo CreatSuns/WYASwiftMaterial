@@ -97,11 +97,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/../../第三方库开发/WYAKit/WYAKit/Assets/Pusab.ttf"
+  install_resource "${PODS_ROOT}/../../../Desktop/WYATeam/WYAOCKit/WYAKit/Assets/Pusab.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/WYAKit/WYAKit.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/../../第三方库开发/WYAKit/WYAKit/Assets/Pusab.ttf"
+  install_resource "${PODS_ROOT}/../../../Desktop/WYATeam/WYAOCKit/WYAKit/Assets/Pusab.ttf"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/WYAKit/WYAKit.bundle"
 fi
 
