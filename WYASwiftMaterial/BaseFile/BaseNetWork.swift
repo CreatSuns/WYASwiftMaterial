@@ -50,7 +50,7 @@ extension BaseNetWork {
         guard (params != nil) else { return "" }
 
         let dic = params!.sorted { (str1, str2) -> Bool in
-            return str1.0 > str2.0
+            return str1.0 < str2.0
         }
         var arr = [String]()
 
@@ -71,6 +71,7 @@ extension BaseNetWork {
 
                 } else {
                     print(item.1)
+//                    str = item.0 + "=" + item.1
                 }
             }
         }

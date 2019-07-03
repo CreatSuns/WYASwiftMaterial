@@ -16,6 +16,7 @@
 		211F645322BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645222BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift */; };
 		211F645522BA316000E9E2F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645422BA316000E9E2F6 /* UIView.swift */; };
 		211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */; };
+		2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2121345922CC49B30012BDEE /* WYABottomLineTextField.m */; };
 		213CCE8F22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */; };
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
@@ -73,6 +74,8 @@
 		211F645222BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingCoverView.swift; sourceTree = "<group>"; };
 		211F645422BA316000E9E2F6 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingCell.swift; sourceTree = "<group>"; };
+		2121345822CC49B30012BDEE /* WYABottomLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYABottomLineTextField.h; sourceTree = "<group>"; };
+		2121345922CC49B30012BDEE /* WYABottomLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYABottomLineTextField.m; sourceTree = "<group>"; };
 		213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseAgentRingCell.swift; sourceTree = "<group>"; };
 		213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingModel.swift; sourceTree = "<group>"; };
 		213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginModel.swift; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				211F644E22BA2EAC00E9E2F6 /* LoginView.swift */,
+				2121345822CC49B30012BDEE /* WYABottomLineTextField.h */,
+				2121345922CC49B30012BDEE /* WYABottomLineTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -657,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */,
 				211F643E22B9E93B00E9E2F6 /* LoginViewController.swift in Sources */,
 				9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */,
 				95CD11B2212275C700331792 /* HomeViewController.swift in Sources */,

@@ -57,17 +57,39 @@ class LoginView: UIView {
         return phoneLab
     }()
 
-    lazy var usernameTF: UITextField = {
+    lazy var usernameTF: WYABottomLineTextField = {
         let rec = tuple((phoneLab.cmam_left,
                          phoneLab.cmam_bottom + 15 * SizeAdapter,
                          self.cmam_width - 62 * SizeAdapter,
                          45 * SizeAdapter))
 
-        let textField = UITextField(frame: rec)
-        textField.borderStyle = .roundedRect
-        textField.placeholder = "请输入账号"
-        textField.backgroundColor = .clear
-        textField.text = "17858629460"
+        let textField = WYABottomLineTextField(frame: rec)
+        textField.keyboardType = .numberPad
+        textField.font = FONT(s: 20)
+        textField.placeholder = "请输入手机号"
+        textField.isPhoneNumber = true
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        button.setImage(UIImage(named: "icon_delete_normal"), for: .normal)
+        button.addCallBackAction({ (button) in
+            textField.text = ""
+        })
+        textField.rightView = button
+        textField.rightViewMode = .whileEditing
+        textField.tintColor = wya_whiteColor
+        textField.textColor = wya_whiteColor
+        textField.setPlaceholderColor(wya_textGrayColor)
+        textField.editingBlock = {
+            if textField.text?.count ?? 0 > 0 {
+                if self.passwordTF.text?.count ?? 0 > 0 {
+                    self.loginButton.isEnabled = true
+                } else {
+                    self.loginButton.isEnabled = false
+                }
+            } else {
+                self.loginButton.isEnabled = false
+            }
+        }
         return textField
     }()
 
@@ -82,17 +104,32 @@ class LoginView: UIView {
         return label
     }()
 
-    lazy var passwordTF: UITextField = {
+    lazy var passwordTF: WYABottomLineTextField = {
         let rec = tuple((passwordLab.cmam_left,
                          passwordLab.cmam_bottom + 15 * SizeAdapter,
                          self.cmam_width - 62 * SizeAdapter,
                          45 * SizeAdapter))
 
-        let textField = UITextField(frame: rec)
-        textField.borderStyle = .roundedRect
-        textField.placeholder = "请输入账号"
-        textField.backgroundColor = .clear
-        textField.text = "123456"
+        let textField = WYABottomLineTextField(frame: rec)
+        textField.isSecureTextEntry = true
+        textField.tintColor = .white
+        textField.returnKeyType = .done
+        textField.placeholder = "请输入密码"
+        textField.setPlaceholderColor(wya_textGrayColor)
+        textField.font = FONT(s: 20)
+        textField.textColor = .white
+        textField.returnKeyType = .done
+        textField.editingBlock = {
+            if textField.text?.count ?? 0 > 0 {
+                if self.usernameTF.text?.count ?? 0 > 0 {
+                    self.loginButton.isEnabled = true
+                } else {
+                    self.loginButton.isEnabled = false
+                }
+            } else {
+                self.loginButton.isEnabled = false
+            }
+        }
         return textField
     }()
 
@@ -103,6 +140,13 @@ class LoginView: UIView {
                                             height: 44 * SizeAdapter))
         button.setTitle("登录", for: UIControlState.normal)
         button.setTitleColor(wya_textBlackColor, for: UIControlState.normal)
+        button.setTitleColor(wya_textWhitColorl, for: .disabled)
+        button.setBackgroundImage(UIImage.wya_createImage(with: wya_whiteColor), for: .normal)
+        button.setBackgroundImage(UIImage.wya_createImage(with: wya_whiteColor.withAlphaComponent(0.5)), for: .disabled)
+        button.layer.cornerRadius = 22 * SizeAdapter
+        button.layer.masksToBounds = true
+        button.titleLabel?.font = FONT(s: 16)
+//        button.isEnabled = false
         button.addTarget(self, action: #selector(buttonClick), for: UIControlEvents.touchUpInside)
         return button
     }()

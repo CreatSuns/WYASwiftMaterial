@@ -10,9 +10,9 @@ import UIKit
 
 class WYALoginModel: BaseNetWork {
     public class func login (_ userName : String, _ password : String) {
-        let params = ["mobile":userName,
+        let params = ["mobile":userName.replacingOccurrences(of: " ", with: ""),
                       "pwd":password,
-                      "device_type":1,
+                      "device_type":"1",
                       "device_token":"",
                       "timestamp":NSDate.getNowTimeTimesSeconds(),
                       "nonce_str":NSString.wya_randomString(withLength: 32)] as [String : Any]
