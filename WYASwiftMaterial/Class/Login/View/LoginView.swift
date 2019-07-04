@@ -63,7 +63,8 @@ class LoginView: UIView {
                          self.cmam_width - 62 * SizeAdapter,
                          45 * SizeAdapter))
 
-        let textField = WYABottomLineTextField(frame: rec)
+        let textField = WYABottomLineTextField()
+        textField.frame = rec
         textField.keyboardType = .numberPad
         textField.font = FONT(s: 20)
         textField.placeholder = "请输入手机号"
@@ -80,8 +81,8 @@ class LoginView: UIView {
         textField.textColor = wya_whiteColor
         textField.setPlaceholderColor(wya_textGrayColor)
         textField.editingBlock = {
-            if textField.text?.count ?? 0 > 0 {
-                if self.passwordTF.text?.count ?? 0 > 0 {
+            if textField.text!.count > 0 {
+                if self.passwordTF.text!.count > 0 {
                     self.loginButton.isEnabled = true
                 } else {
                     self.loginButton.isEnabled = false
@@ -110,7 +111,8 @@ class LoginView: UIView {
                          self.cmam_width - 62 * SizeAdapter,
                          45 * SizeAdapter))
 
-        let textField = WYABottomLineTextField(frame: rec)
+        let textField = WYABottomLineTextField()
+        textField.frame = rec
         textField.isSecureTextEntry = true
         textField.tintColor = .white
         textField.returnKeyType = .done
@@ -120,8 +122,8 @@ class LoginView: UIView {
         textField.textColor = .white
         textField.returnKeyType = .done
         textField.editingBlock = {
-            if textField.text?.count ?? 0 > 0 {
-                if self.usernameTF.text?.count ?? 0 > 0 {
+            if textField.text!.count > 0 {
+                if self.usernameTF.text!.count > 0 {
                     self.loginButton.isEnabled = true
                 } else {
                     self.loginButton.isEnabled = false
@@ -146,7 +148,7 @@ class LoginView: UIView {
         button.layer.cornerRadius = 22 * SizeAdapter
         button.layer.masksToBounds = true
         button.titleLabel?.font = FONT(s: 16)
-//        button.isEnabled = false
+        button.isEnabled = false
         button.addTarget(self, action: #selector(buttonClick), for: UIControlEvents.touchUpInside)
         return button
     }()

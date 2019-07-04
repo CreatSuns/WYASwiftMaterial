@@ -18,7 +18,9 @@ class LoginViewController: UIViewController {
         let loginV = LoginView(frame: self.view.frame)
         self.view.addSubview(loginV)
         loginV.nativeCallback = { (name, password) in
-            WYALoginModel.login(name ?? "", password ?? "")
+            WYALoginModel.login(name ?? "", password ?? "", handle: {(model) in
+                Window?.rootViewController = RootViewController()
+            })
         }
 
     }

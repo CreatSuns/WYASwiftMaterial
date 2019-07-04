@@ -9,12 +9,12 @@
 import UIKit
 
 class RootViewController: UITabBarController {
-    var normalTitleColor : UIColor = UIColor.init(red: 102.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0){
+    var normalTitleColor : UIColor = wya_textGrayColor{
         didSet{
             UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor:normalTitleColor,NSAttributedStringKey.font:UIFont.systemFont(ofSize: tabBarTitleFont)], for: UIControlState.normal)
         }
     }
-    var selectedTitleColor : UIColor = UIColor.init(red: 77.0/255.0, green: 154.0/255.0, blue: 247.0/255.0, alpha: 1.0) {
+    var selectedTitleColor : UIColor = wya_blackColor {
         didSet{
               UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor:selectedTitleColor], for: UIControlState.selected)
         }

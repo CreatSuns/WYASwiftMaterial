@@ -17,6 +17,7 @@
 		211F645522BA316000E9E2F6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645422BA316000E9E2F6 /* UIView.swift */; };
 		211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */; };
 		2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2121345922CC49B30012BDEE /* WYABottomLineTextField.m */; };
+		2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */; };
 		213CCE8F22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */; };
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
@@ -76,6 +77,7 @@
 		211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingCell.swift; sourceTree = "<group>"; };
 		2121345822CC49B30012BDEE /* WYABottomLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYABottomLineTextField.h; sourceTree = "<group>"; };
 		2121345922CC49B30012BDEE /* WYABottomLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYABottomLineTextField.m; sourceTree = "<group>"; };
+		2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingFooterView.swift; sourceTree = "<group>"; };
 		213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseAgentRingCell.swift; sourceTree = "<group>"; };
 		213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingModel.swift; sourceTree = "<group>"; };
 		213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginModel.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				211F645222BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift */,
 				211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */,
+				2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -560,7 +563,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial-resources.sh",
-				"${PODS_ROOT}/../../../Desktop/WYATeam/WYAOCKit/WYAKit/Assets/Pusab.ttf",
+				"${PODS_ROOT}/../../第三方库开发/WYAKit/WYAKit/Assets/Pusab.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WYAKit/WYAKit.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -682,6 +685,7 @@
 				9563B4DC2125618B007AC364 /* ExampleNavBarVC.swift in Sources */,
 				95CD11C42122D49000331792 /* PrintTool.swift in Sources */,
 				211F644922BA086400E9E2F6 /* WYAColor.swift in Sources */,
+				2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */,
 				95CD11A4212269D500331792 /* AppDelegate.swift in Sources */,
 				213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */,
 				211F645522BA316000E9E2F6 /* UIView.swift in Sources */,

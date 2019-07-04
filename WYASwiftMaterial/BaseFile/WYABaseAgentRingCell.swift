@@ -218,6 +218,7 @@ class WYAActionBar: UIView {
         let button = UIButton(type: .custom)
         button.setTitle("评论", for: .normal)
         button.setTitleColor(wya_textBlackColor, for: .normal)
+        button.titleLabel?.font = FONT(s: 13)
         button.setImage(UIImage(named: "icon_pinglun"), for: .normal)
         button.setImage(UIImage(named: "icon_pinglunblack"), for: .highlighted)
         button.imageEdgeInsets = UIEdgeInsetsMake(0, -space / 2.0, 0, space / 2.0)
@@ -229,6 +230,7 @@ class WYAActionBar: UIView {
         let button = UIButton(type: .custom)
         button.setTitle("收藏", for: .normal)
         button.setTitleColor(wya_textBlackColor, for: .normal)
+        button.titleLabel?.font = FONT(s: 13)
         button.setImage(UIImage(named: "icon_collect"), for: .normal)
         button.setImage(UIImage(named: "icon_collect_press"), for: .selected)
         return button

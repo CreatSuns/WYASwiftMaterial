@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
             tableView.dataSource = self
             tableView.separatorStyle = .none
             tableView.register(WYAAgentRingCell.self, forCellReuseIdentifier: "CellId")
+            tableView.register(WYAAgentRingFooterView.self, forHeaderFooterViewReuseIdentifier: "foot")
             tableView.tableFooterView = UIView()
             tableView.tableHeaderView = WYAAgentRingCoverView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 255 * SizeAdapter))
         return tableView
@@ -52,12 +53,12 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSources.count
+        return 1
     }
     
     // 设置section的数量
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return dataSources.count
     }
     
     // 设置tableview的cell
@@ -67,8 +68,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
 
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot")
+        return footView
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 80
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

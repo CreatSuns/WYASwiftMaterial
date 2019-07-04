@@ -13,7 +13,7 @@ pod 'SQLite.swift','~>0.11.4'
 # layout类似于Masonry
 pod 'SnapKit','~>4.0.0'
 
-#pod 'WYAKit', :path => '/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit'
-pod 'WYAKit', :path => '/Users/lijunheng/Desktop/WYATeam/WYAOCKit'
+pod 'WYAKit', :path => '/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit'
+#pod 'WYAKit', :path => '/Users/lijunheng/Desktop/WYATeam/WYAOCKit'
 
 end

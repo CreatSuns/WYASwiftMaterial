@@ -33,14 +33,14 @@ class BaseNetWork: NSObject {
                    "platform":"ios"+UIDevice.current.systemVersion,
                    "sign":BaseNetWork.paramsTurnString(paramenters)]
 
-    Alamofire.request(URLString, method: method, parameters: paramenters, headers:headers as? HTTPHeaders).responseJSON { (response) in
+    Alamofire.request(URLString, method: method, parameters: paramenters,encoding: JSONEncoding.prettyPrinted, headers:headers as? HTTPHeaders).responseJSON { (response) in
             // 3.获取结果
             guard let result = response.result.value else {
                 print(response.result.error!)// 请求出现错误会输出error
                 return
             }
             // 4.将结果回调出去
-            finishedCallback(result)
+            finishedCallback(response.data)
         }
     }
 }
@@ -75,7 +75,9 @@ extension BaseNetWork {
                 }
             }
         }
-        let resultString = arr.joined(separator: "&") as NSString
+        let sss = arr.joined(separator: "&")
+
+        let resultString = (sss + "il3qTF7xaXLsiXff4YqYCeNrsI9Ne3ev") as NSString
         print(resultString)
         let md5String = NSString.wya_md5With(resultString)() as String
 

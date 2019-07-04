@@ -78,7 +78,7 @@ DEPENDENCIES:
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.4)
   - SVProgressHUD (~> 2.2.2)
-  - WYAKit (from `/Users/lijunheng/Desktop/WYATeam/WYAOCKit`)
+  - "WYAKit (from `/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit`)"
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -109,7 +109,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   WYAKit:
-    :path: "/Users/lijunheng/Desktop/WYATeam/WYAOCKit"
+    :path: "/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -138,6 +138,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 55ee819ac3a6075337a1b3ccf486aaaeaab595e3
+PODFILE CHECKSUM: 71781cc9c3582fdc11d07862c33a8a7e7126b1ec
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1
