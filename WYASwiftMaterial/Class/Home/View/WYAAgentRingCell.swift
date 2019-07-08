@@ -9,6 +9,8 @@
 import UIKit
 
 class WYAAgentRingCell: WYABaseAgentRingCell {
+    var height : Float = 0.1
+    var imageHeight : Float = 0.0
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -32,12 +34,42 @@ class WYAAgentRingCell: WYABaseAgentRingCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        userReleaseContentLabel.snp_updateConstraints { (make) in
+            make.height.equalTo(height)
+        }
+
+        showButton.snp_updateConstraints { (make) in
+            make.top.equalTo(userReleaseContentLabel.snp_bottom).offset(showButton.isHidden ? 0 : 6.5 * SizeAdapter)
+            make.height.equalTo(showButton.isHidden ? 0 : 15 * SizeAdapter)
+        }
+
+        userReleaseImagesView.snp_updateConstraints { (make) in
+            make.top.equalTo(showButton.snp_bottom).offset(imageHeight > 0 ? 10.5 * SizeAdapter : 0)
+            make.height.equalTo(imageHeight)
+        }
+
         actionBar.snp_remakeConstraints { (make) in
             make.left.right.equalTo(userReleaseContentLabel)
             make.top.equalTo(userReleaseImagesView.snp_bottom).offset(10.5 * SizeAdapter)
             make.height.equalTo(20 * SizeAdapter)
         }
     }
+    
+    override func configCellWithIndexPath(indexPath: IndexPath) {
+        super.configCellWithIndexPath(indexPath: indexPath)
+        let model = (self.viewModel as! WYAAgentRingViewModel).list[indexPath.section]
+        wyaPrint(model)
+        self.userNameLabel.text = model.agent_name
+        self.userLevelLabel.text = model.agent_level_name
+        self.userReleaseContentLabel.text = model.content
+        height = model.contentHeight
+        userReleaseImagesView.images(model.image!)
+        imageHeight = model.imageSuperHeight
+        self.layoutIfNeeded()
+    }
 }
 
+extension WYAAgentRingCell {
+
+}
 

@@ -13,7 +13,7 @@ struct WYALoginDataModel : Codable {
         struct WYAAgentItem : Codable {
             var prefix_mobile : String?
             var agent_mobile : String?
-            var admin_id : Int?
+            var admin_id : WYABaseType?
             var agent_level_name : String?
             var agent_level : Int?
             var agent_avatar : String?
@@ -46,9 +46,7 @@ class WYALoginModel: BaseNetWork {
         let params = ["mobile":userName.replacingOccurrences(of: " ", with: ""),
                       "pwd":password,
                       "device_type":"1",
-                      "device_token":"",
-                      "timestamp":NSDate.getNowTimeTimesSeconds(),
-                      "nonce_str":NSString.wya_randomString(withLength: 32)] as [String : Any]
+                      "device_token":""] as [String : Any]
 
         WYALoginModel.requestData(.post, URLString: loginUrl, paramenters: params) { (result) in
             print(result)
@@ -58,9 +56,20 @@ class WYALoginModel: BaseNetWork {
             } catch let error {
                 wyaPrint(error)
             }
-            UserDefaults.standard.set(model?.data?.access_token, forKey: "accessToken")
+            wyaPrint(model?.data?.agent![0].admin_id?.bool)
+            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
             UserDefaults.standard.synchronize()
-            handle(model ?? WYALoginDataModel())
+//            handle(model ?? WYALoginDataModel())
+            if model?.data?.agent?.count ?? 0 > 0 {
+                choosePL((model?.data?.agent![0])!)
+            }
+
+        }
+    }
+    class func choosePL(_ model : WYALoginDataModel.WYALoginUserInfoModel.WYAAgentItem) -> Void {
+        let params = ["admin_id":model.admin_id?.int]
+        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params as [String : Any]) { (result) in
+            Window?.rootViewController = RootViewController()
         }
     }
 }

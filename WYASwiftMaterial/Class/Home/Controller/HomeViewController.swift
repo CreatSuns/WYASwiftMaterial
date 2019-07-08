@@ -9,7 +9,8 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-    let dataSources = ["设置图片格式按钮背景色","设置导航栏基本格式","网络请求"]
+    var viewModel = WYAAgentRingViewModel()
+
     // 懒加载模式
     lazy var tableView = {()->UITableView in
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight-WYATabBarHeight), style: .grouped)
@@ -26,7 +27,12 @@ class HomeViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        WYAAgentRingModel.fetchAgentRingCoverImage()
+        viewModel.fetchAgentRingCoverImage { (string) in
+            (self.tableView.tableHeaderView as! WYAAgentRingCoverView).agentRingCoverImageView.sd_setImage(with: URL(string: string), placeholderImage: UIImage(named: "pic_shouyebackground"), options: .retryFailed, context: nil)
+        }
+//        viewModel.fetchAgentRingList(params: ["pageSize":10,"circle_pass_id":0]) {
+//            self.tableView.reloadData()
+//        }
     }
 
     override func viewDidLoad() {
@@ -58,13 +64,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     // 设置section的数量
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSources.count
+        return viewModel.list.count
     }
     
     // 设置tableview的cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)) as! WYAAgentRingCell
-//        cell.textLabel?.text = dataSources[indexPath.row]
+        cell.bindViewModel(viewModel: self.viewModel)
+        cell.configCellWithIndexPath(indexPath: indexPath)
         return cell
     }
 
@@ -74,7 +81,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return CGFloat(viewModel.list[indexPath.section].cellHeight)
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

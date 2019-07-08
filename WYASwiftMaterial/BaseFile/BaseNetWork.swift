@@ -25,24 +25,44 @@ class BaseNetWork: NSObject {
    class func requestData(_ type:MethodType,URLString:String,paramenters:[String : Any]? = nil ,finishedCallback:@escaping(_ result : Any)->()) {
         // 1.获取请求的类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        // 2.发送网络请求
-    let infoDictionary = Bundle.main.infoDictionary!
-    let majorVersion = infoDictionary["CFBundleShortVersionString"]
-
-    let headers = ["version": majorVersion as! String,
-                   "platform":"ios"+UIDevice.current.systemVersion,
-                   "sign":BaseNetWork.paramsTurnString(paramenters)]
-
-    Alamofire.request(URLString, method: method, parameters: paramenters,encoding: JSONEncoding.prettyPrinted, headers:headers as? HTTPHeaders).responseJSON { (response) in
-            // 3.获取结果
-            guard let result = response.result.value else {
-                print(response.result.error!)// 请求出现错误会输出error
-                return
-            }
-            // 4.将结果回调出去
-            finishedCallback(response.data)
+        var params : [String : Any]
+        if paramenters == nil {
+            params = [String : Any]()
+        } else {
+            params = paramenters!
         }
-    }
+
+        params["timestamp"] = NSDate.getNowTimeTimesSeconds()
+        params["nonce_str"] = NSString.wya_randomString(withLength: 32)
+        // 2.发送网络请求
+        let infoDictionary = Bundle.main.infoDictionary!
+        let majorVersion = infoDictionary["CFBundleShortVersionString"]
+
+        var headers : HTTPHeaders = ["version" : majorVersion as! String,
+                                     "platform" : "ios"+UIDevice.current.systemVersion,
+                                     "sign" : BaseNetWork.paramsTurnString(params)]
+
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            headers["token"] = token
+        }
+
+        var coding : ParameterEncoding
+        if type == .post {
+            coding = JSONEncoding.prettyPrinted
+        } else {
+            coding = URLEncoding.default
+        }
+
+        Alamofire.request(URLString, method: method, parameters: params, encoding: coding, headers:headers).responseJSON { (response) in
+                // 3.获取结果
+                guard let result = response.result.value else {
+                    print(response.result.error!)// 请求出现错误会输出error
+                    return
+                }
+                // 4.将结果回调出去
+                finishedCallback(response.data as Any)
+            }
+        }
 }
 
 extension BaseNetWork {

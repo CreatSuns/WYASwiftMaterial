@@ -9,6 +9,8 @@
 import UIKit
 
 class WYABaseAgentRingCell: UITableViewCell {
+    var viewModel : (Any)? = nil
+    var indexPath : IndexPath? = nil
 
     lazy var userHeaderImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "pic_pingluntouxiang"))
@@ -68,9 +70,8 @@ class WYABaseAgentRingCell: UITableViewCell {
         return button
     }()
 
-    lazy var userReleaseImagesView: WYAImageContainerView = {
+    public lazy var userReleaseImagesView: WYAImageContainerView = {
         let view = WYAImageContainerView()
-        view.images(["1","1","1"])
         return view
     }()
 
@@ -150,9 +151,20 @@ class WYABaseAgentRingCell: UITableViewCell {
             make.left.equalTo(userReleaseContentLabel)
             make.right.equalTo(contentView.snp_right).offset(-58 * SizeAdapter)
             make.top.equalTo(showButton.snp_bottom)
-            make.height.equalTo(100)
+            make.height.equalTo(0)
         }
     }
+
+    public func bindViewModel(viewModel:Any) {
+        self.viewModel = viewModel
+    }
+
+    public func configCellWithIndexPath(indexPath:IndexPath) {
+        self.indexPath = indexPath
+    }
+}
+
+extension WYABaseAgentRingCell {
 
 }
 
@@ -167,9 +179,12 @@ class WYAImageContainerView: UIView {
     }
 
     public func images(_ images:[String]) {
-        for string in 0..<images.count {
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+        for string in images {
             let button = UIButton(type: .custom)
-            button.setImage(UIImage(named: "icon_zhuanfa"), for: .normal)
+            button.sd_setBackgroundImage(with: URL(string: string), for: .normal, completed: nil)
             button.contentMode = .scaleAspectFill
             button.imageView?.contentMode = .scaleAspectFill
             button.contentHorizontalAlignment = .fill
@@ -190,7 +205,7 @@ class WYAImageContainerView: UIView {
                 let row              = index / 3
                 let column           = index % 3
 
-                let view_width  = (ScreenWidth - 190.5 * SizeAdapter - 2 * 5 * SizeAdapter) / 3;
+                let view_width  = (ScreenWidth - 120 * SizeAdapter - 2 * 5 * SizeAdapter) / 3;
                 let view_height = view_width;
                 let view_x      = (view_width + 5 * SizeAdapter) * CGFloat(column);
                 let view_y      = (view_width + 5 * SizeAdapter) * CGFloat(row);

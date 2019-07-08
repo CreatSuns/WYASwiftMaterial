@@ -17,3 +17,5 @@ pod 'WYAKit', :path => '/Users/lishihang/Desktop/GitProject/第三方库开发/W
 #pod 'WYAKit', :path => '/Users/lijunheng/Desktop/WYATeam/WYAOCKit'
 
 end
+
+target ''

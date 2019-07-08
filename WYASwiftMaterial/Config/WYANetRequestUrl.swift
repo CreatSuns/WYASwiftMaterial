@@ -11,6 +11,8 @@ import Foundation
 let baseUrl = "https://gateway-mobile.wyawds.com/"
 
 let loginUrl = baseUrl + "api/material-app/material-login.json"
+let chooseProductLine = baseUrl + "material/account/set-admin-info.json"
 
 let agentRingCoverImageUrl = baseUrl + "material/agent-circle/cover-image.json"
 
+let agentRingList = baseUrl + "material/agent-circle/get-list.json"

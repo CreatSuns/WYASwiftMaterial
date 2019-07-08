@@ -18,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = LoginViewController()
+        let token = UserDefaults.standard.string(forKey: "token")
+        if token != nil {
+            window?.rootViewController = RootViewController()
+        } else {
+            window?.rootViewController = LoginViewController()
+        }
+
         window?.makeKeyAndVisible()
         return true
     }

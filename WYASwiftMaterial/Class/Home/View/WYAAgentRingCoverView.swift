@@ -10,7 +10,7 @@ import UIKit
 
 class WYAAgentRingCoverView: UIView {
 
-    lazy var agentRingCoverImageView: UIImageView = {
+    public lazy var agentRingCoverImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0.0, y: self.cmam_height - 30.0 * SizeAdapter - 325 * SizeAdapter, width: self.cmam_width, height: 325 * SizeAdapter))
         imageView.image = UIImage(named: "pic_shouyebackground")
         return imageView

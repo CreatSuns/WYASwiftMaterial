@@ -18,6 +18,9 @@
 		211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */; };
 		2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2121345922CC49B30012BDEE /* WYABottomLineTextField.m */; };
 		2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */; };
+		2121346322CDFF9C0012BDEE /* WYABaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121346222CDFF9C0012BDEE /* WYABaseModel.swift */; };
+		213B968922CEF44C00D060FC /* WYAAgentRingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B968822CEF44C00D060FC /* WYAAgentRingViewModel.swift */; };
+		213B968C22CF434B00D060FC /* WYASwiftMaterialTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */; };
 		213CCE8F22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */; };
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
@@ -26,8 +29,6 @@
 		9563B4D82125614C007AC364 /* ExampleNetWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */; };
 		9563B4DA21256161007AC364 /* ExampleNavSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D921256161007AC364 /* ExampleNavSetVC.swift */; };
 		9563B4DC2125618B007AC364 /* ExampleNavBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4DB2125618B007AC364 /* ExampleNavBarVC.swift */; };
-		95CD11792122691B00331792 /* WYASwiftEnvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD11782122691B00331792 /* WYASwiftEnvTests.swift */; };
-		95CD11842122691B00331792 /* WYASwiftEnvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD11832122691B00331792 /* WYASwiftEnvUITests.swift */; };
 		95CD11A4212269D500331792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD119A212269D500331792 /* AppDelegate.swift */; };
 		95CD11A5212269D500331792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CD119C212269D500331792 /* LaunchScreen.storyboard */; };
 		95CD11A7212269D500331792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CD11A0212269D500331792 /* Assets.xcassets */; };
@@ -78,6 +79,10 @@
 		2121345822CC49B30012BDEE /* WYABottomLineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYABottomLineTextField.h; sourceTree = "<group>"; };
 		2121345922CC49B30012BDEE /* WYABottomLineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYABottomLineTextField.m; sourceTree = "<group>"; };
 		2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingFooterView.swift; sourceTree = "<group>"; };
+		2121346222CDFF9C0012BDEE /* WYABaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseModel.swift; sourceTree = "<group>"; };
+		213B968822CEF44C00D060FC /* WYAAgentRingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingViewModel.swift; sourceTree = "<group>"; };
+		213B968A22CF434A00D060FC /* WYASwiftMaterialTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WYASwiftMaterialTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftMaterialTest.swift; sourceTree = "<group>"; };
 		213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseAgentRingCell.swift; sourceTree = "<group>"; };
 		213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingModel.swift; sourceTree = "<group>"; };
 		213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginModel.swift; sourceTree = "<group>"; };
@@ -91,11 +96,7 @@
 		9563B4DB2125618B007AC364 /* ExampleNavBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavBarVC.swift; sourceTree = "<group>"; };
 		95CD11602122691A00331792 /* WYASwiftMaterial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYASwiftMaterial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CD11742122691B00331792 /* WYASwiftMaterialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95CD11782122691B00331792 /* WYASwiftEnvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftEnvTests.swift; sourceTree = "<group>"; };
-		95CD117A2122691B00331792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95CD117F2122691B00331792 /* WYASwiftMaterialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95CD11832122691B00331792 /* WYASwiftEnvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftEnvUITests.swift; sourceTree = "<group>"; };
-		95CD11852122691B00331792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95CD119A212269D500331792 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CD119D212269D500331792 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95CD11A0212269D500331792 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -196,6 +197,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		213B968722CEF43300D060FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				213B968822CEF44C00D060FC /* WYAAgentRingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		213CCE9022BB5AB700DDA4BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,12 +244,12 @@
 		95CD11572122691A00331792 = {
 			isa = PBXGroup;
 			children = (
+				213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */,
 				95CD11622122691A00331792 /* WYASwiftMaterial */,
-				95CD11772122691B00331792 /* WYASwiftEnvTests */,
-				95CD11822122691B00331792 /* WYASwiftEnvUITests */,
 				95CD11612122691A00331792 /* Products */,
 				4F8E37B8324746B3BCE1F010 /* Pods */,
 				8858EE8FF700094030EA6A25 /* Frameworks */,
+				213B968A22CF434A00D060FC /* WYASwiftMaterialTests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,24 +278,6 @@
 				95CD1191212269D400331792 /* RootController */,
 			);
 			path = WYASwiftMaterial;
-			sourceTree = "<group>";
-		};
-		95CD11772122691B00331792 /* WYASwiftEnvTests */ = {
-			isa = PBXGroup;
-			children = (
-				95CD11782122691B00331792 /* WYASwiftEnvTests.swift */,
-				95CD117A2122691B00331792 /* Info.plist */,
-			);
-			path = WYASwiftEnvTests;
-			sourceTree = "<group>";
-		};
-		95CD11822122691B00331792 /* WYASwiftEnvUITests */ = {
-			isa = PBXGroup;
-			children = (
-				95CD11832122691B00331792 /* WYASwiftEnvUITests.swift */,
-				95CD11852122691B00331792 /* Info.plist */,
-			);
-			path = WYASwiftEnvUITests;
 			sourceTree = "<group>";
 		};
 		95CD1191212269D400331792 /* RootController */ = {
@@ -349,6 +340,7 @@
 		95CD1197212269D500331792 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				213B968722CEF43300D060FC /* ViewModel */,
 				213CCE9022BB5AB700DDA4BE /* Model */,
 				211F645122BA2EEB00E9E2F6 /* View */,
 				95CD11AD2122732500331792 /* Controller */,
@@ -402,6 +394,7 @@
 				95CD11AF2122737200331792 /* BaseViewController.swift */,
 				9563B4D321251EA8007AC364 /* BaseNetWork.swift */,
 				213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */,
+				2121346222CDFF9C0012BDEE /* WYABaseModel.swift */,
 			);
 			path = BaseFile;
 			sourceTree = "<group>";
@@ -498,6 +491,7 @@
 					};
 					95CD11732122691B00331792 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 95CD115F2122691A00331792;
 					};
 					95CD117E2122691B00331792 = {
@@ -675,6 +669,7 @@
 				95CD11AA21226C7800331792 /* RootViewController.swift in Sources */,
 				213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */,
 				95CD11B02122737200331792 /* BaseViewController.swift in Sources */,
+				2121346322CDFF9C0012BDEE /* WYABaseModel.swift in Sources */,
 				213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */,
 				95CD11BA2122AD8D00331792 /* WYABaseConfig.swift in Sources */,
 				95CD11CD212419D900331792 /* String.swift in Sources */,
@@ -690,6 +685,7 @@
 				213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */,
 				211F645522BA316000E9E2F6 /* UIView.swift in Sources */,
 				95CD11BE2122ADB500331792 /* WYANoticName.swift in Sources */,
+				213B968922CEF44C00D060FC /* WYAAgentRingViewModel.swift in Sources */,
 				95CD11C02122ADC500331792 /* WYANetRequestUrl.swift in Sources */,
 				211F644D22BA2C8000E9E2F6 /* MaterialViewController.swift in Sources */,
 				95CD11AC21226CA100331792 /* RootControllerModel.swift in Sources */,
@@ -703,7 +699,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CD11792122691B00331792 /* WYASwiftEnvTests.swift in Sources */,
+				213B968C22CF434B00D060FC /* WYASwiftMaterialTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,7 +707,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CD11842122691B00331792 /* WYASwiftEnvUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,6 +911,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J5265ZP7QT;
 				INFOPLIST_FILE = WYASwiftEnvTests/Info.plist;
@@ -926,6 +922,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weiyian.ws.WYASwiftEnvTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WYASwiftMaterialTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYASwiftMaterial.app/WYASwiftMaterial";
@@ -937,6 +935,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J5265ZP7QT;
 				INFOPLIST_FILE = WYASwiftEnvTests/Info.plist;
@@ -947,6 +946,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.weiyian.ws.WYASwiftEnvTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WYASwiftMaterialTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYASwiftMaterial.app/WYASwiftMaterial";
