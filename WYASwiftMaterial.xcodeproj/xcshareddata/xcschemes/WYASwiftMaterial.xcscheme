@@ -38,6 +38,16 @@
                ReferencedContainer = "container:WYASwiftMaterial.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9523894122D70DB9006646A2"
+               BuildableName = "WYASwiftMaterialUnitTests.xctest"
+               BlueprintName = "WYASwiftMaterialUnitTests"
+               ReferencedContainer = "container:WYASwiftMaterial.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

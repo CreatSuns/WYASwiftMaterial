@@ -1,6 +1,6 @@
 {
   "name": "WYAKit",
-  "version": "0.1.36",
+  "version": "0.1.38",
   "summary": "WYAKit组件库",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/wya-team/WYAOCKit.git",
@@ -13,11 +13,12 @@
   },
   "source": {
     "git": "https://github.com/wya-team/WYAOCKit.git",
-    "tag": "0.1.36"
+    "tag": "0.1.38"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "swift_versions": "5.0",
   "source_files": "WYAKit/Classes/**/*.{h,m,pch}",
   "static_framework": true,
   "resource_bundles": {
@@ -61,7 +62,7 @@
 
     ],
     "Realm": [
-
+      "3.15.0"
     ],
     "AFNetworking": [
 
@@ -78,11 +79,9 @@
     "SSKeychain": [
 
     ],
-    "Bugly": [
-
-    ],
     "YogaKit": [
-
+      "~> 1.14.0"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }
