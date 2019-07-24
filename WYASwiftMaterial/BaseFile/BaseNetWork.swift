@@ -89,9 +89,12 @@ extension BaseNetWork {
                         arr.append(str)
                     }
 
-                } else {
+                } else if item.1 is Int {
                     print(item.1)
-//                    str = item.0 + "=" + item.1
+                    let aaa = item.1 as! Int
+
+                    str = item.0 + "=" + String(aaa)
+                    arr.append(str)
                 }
             }
         }

@@ -16,7 +16,6 @@ PODS:
     - AFNetworking/NSURLSession
   - Alamofire (4.6.0)
   - AliyunOSSiOS (2.10.7)
-  - Bugly (2.5.0)
   - CocoaLumberjack (3.5.3):
     - CocoaLumberjack/Core (= 3.5.3)
   - CocoaLumberjack/Core (3.5.3)
@@ -44,21 +43,20 @@ PODS:
   - SVGKit (2.1.1):
     - CocoaLumberjack (~> 3.0)
   - SVProgressHUD (2.2.5)
-  - WYAKit (0.1.36):
+  - WYAKit (0.1.38):
     - AFNetworking
     - AliyunOSSiOS
-    - Bugly
     - FMDB
     - GPUImage
     - JQFMDB
     - Masonry
     - MJRefresh
     - NTYAmrConverter
-    - Realm
+    - Realm (= 3.15.0)
     - SDWebImage
     - SSKeychain
     - SVGKit
-    - YogaKit
+    - YogaKit (~> 1.14.0)
     - YYImage
     - YYModel
     - YYText
@@ -85,7 +83,6 @@ SPEC REPOS:
     - AFNetworking
     - Alamofire
     - AliyunOSSiOS
-    - Bugly
     - CocoaLumberjack
     - FMDB
     - GPUImage
@@ -115,7 +112,6 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AliyunOSSiOS: 602b6a4e70e62a5f0a6431c20496343141d7e66f
-  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
@@ -131,7 +127,7 @@ SPEC CHECKSUMS:
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   SVGKit: 652cdf7bef8bec8564d04a8511d3ab50c7595fac
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  WYAKit: 04510769d8a2fe0f7aee4d7253322b9641d4e361
+  WYAKit: 1ee3f56fa97f8724045467c634b66afab4819cc4
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: 5d1dc899cecd5946e5a758a0c3997704a4b48d01
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
@@ -140,4 +136,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 71781cc9c3582fdc11d07862c33a8a7e7126b1ec
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4

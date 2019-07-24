@@ -30,9 +30,7 @@ class HomeViewController: BaseViewController {
         viewModel.fetchAgentRingCoverImage { (string) in
             (self.tableView.tableHeaderView as! WYAAgentRingCoverView).agentRingCoverImageView.sd_setImage(with: URL(string: string), placeholderImage: UIImage(named: "pic_shouyebackground"), options: .retryFailed, context: nil)
         }
-//        viewModel.fetchAgentRingList(params: ["pageSize":10,"circle_pass_id":0]) {
-//            self.tableView.reloadData()
-//        }
+
     }
 
     override func viewDidLoad() {
@@ -48,6 +46,24 @@ class HomeViewController: BaseViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+
+        tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
+
+            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":0], isHeaderRefresh: true, handle: {
+                self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
+            })
+        })
+
+        tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {[weak self] in
+            let model = self?.viewModel.list.last
+
+            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":model!.agent_id!], isHeaderRefresh: false, handle: {
+                self?.tableView.mj_footer.endRefreshing()
+                self?.tableView.reloadData()
+            })
+        })
+        tableView.mj_header.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,8 +92,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot")
+        let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot") as! WYAAgentRingFooterView
+        footView.bindViewModel(viewModel: self.viewModel)
+        footView.configFootWithIndexPath(section: section)
         return footView
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,27 +107,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 80
+        let height = CGFloat(viewModel.list[section].footHeight)
+        return height
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         var vc:BaseViewController?
-        switch indexPath.row {
-        case 0:
-            vc = ExampleNavBarVC()
-            break
-        case 1:
-            vc = EXampleNavSetVC()
-            break
-            
-        case 2:
-            vc = ExampleNetWorkVC()
-            break
-        default:
-            break
-        }
-        vc?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc!, animated: true)
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
     }
 }
 

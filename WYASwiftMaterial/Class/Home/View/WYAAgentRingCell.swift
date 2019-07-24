@@ -65,6 +65,12 @@ class WYAAgentRingCell: WYABaseAgentRingCell {
         height = model.contentHeight
         userReleaseImagesView.images(model.image!)
         imageHeight = model.imageSuperHeight
+        if model.contentHeight > Float(38 * SizeAdapter) {
+            self.showButton.isHidden = false
+        } else {
+            self.showButton.isHidden = true
+        }
+        actionBar.praiseButton.setTitle(String(model.point_num!), for: .normal)
         self.layoutIfNeeded()
     }
 }
