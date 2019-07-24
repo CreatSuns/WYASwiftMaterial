@@ -20,11 +20,11 @@
 		2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */; };
 		2121346322CDFF9C0012BDEE /* WYABaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2121346222CDFF9C0012BDEE /* WYABaseModel.swift */; };
 		213B968922CEF44C00D060FC /* WYAAgentRingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B968822CEF44C00D060FC /* WYAAgentRingViewModel.swift */; };
-		213B968C22CF434B00D060FC /* WYASwiftMaterialTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */; };
 		213CCE8F22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */; };
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
 		213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9622BB8BA200DDA4BE /* Dictionary.swift */; };
+		9523894522D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */; };
 		9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D321251EA8007AC364 /* BaseNetWork.swift */; };
 		9563B4D82125614C007AC364 /* ExampleNetWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */; };
 		9563B4DA21256161007AC364 /* ExampleNavSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D921256161007AC364 /* ExampleNavSetVC.swift */; };
@@ -48,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9523894722D70DB9006646A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95CD11582122691A00331792 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95CD115F2122691A00331792;
+			remoteInfo = WYASwiftMaterial;
+		};
 		95CD11752122691B00331792 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95CD11582122691A00331792 /* Project object */;
@@ -81,8 +88,6 @@
 		2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingFooterView.swift; sourceTree = "<group>"; };
 		2121346222CDFF9C0012BDEE /* WYABaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseModel.swift; sourceTree = "<group>"; };
 		213B968822CEF44C00D060FC /* WYAAgentRingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingViewModel.swift; sourceTree = "<group>"; };
-		213B968A22CF434A00D060FC /* WYASwiftMaterialTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WYASwiftMaterialTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftMaterialTest.swift; sourceTree = "<group>"; };
 		213CCE8E22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYABaseAgentRingCell.swift; sourceTree = "<group>"; };
 		213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingModel.swift; sourceTree = "<group>"; };
 		213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginModel.swift; sourceTree = "<group>"; };
@@ -90,6 +95,9 @@
 		61B855A68E73B3305E13ADD4 /* Pods-WYASwiftMaterial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftMaterial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial.debug.xcconfig"; sourceTree = "<group>"; };
 		7DBB0137EB4AFF0849D9A977 /* Pods-WYASwiftEnv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftEnv.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftEnv/Pods-WYASwiftEnv.release.xcconfig"; sourceTree = "<group>"; };
 		7E6490D80BEFB40E51FD9DE0 /* Pods_WYASwiftEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYASwiftEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9523894222D70DB9006646A2 /* WYASwiftMaterialUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftMaterialUnitTests.swift; sourceTree = "<group>"; };
+		9523894622D70DB9006646A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9563B4D321251EA8007AC364 /* BaseNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetWork.swift; sourceTree = "<group>"; };
 		9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetWorkVC.swift; sourceTree = "<group>"; };
 		9563B4D921256161007AC364 /* ExampleNavSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavSetVC.swift; sourceTree = "<group>"; };
@@ -118,6 +126,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9523893F22D70DB9006646A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95CD115D2122691A00331792 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,15 +256,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9523894322D70DB9006646A2 /* WYASwiftMaterialUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */,
+				9523894622D70DB9006646A2 /* Info.plist */,
+			);
+			path = WYASwiftMaterialUnitTests;
+			sourceTree = "<group>";
+		};
 		95CD11572122691A00331792 = {
 			isa = PBXGroup;
 			children = (
-				213B968B22CF434B00D060FC /* WYASwiftMaterialTest.swift */,
 				95CD11622122691A00331792 /* WYASwiftMaterial */,
+				9523894322D70DB9006646A2 /* WYASwiftMaterialUnitTests */,
 				95CD11612122691A00331792 /* Products */,
 				4F8E37B8324746B3BCE1F010 /* Pods */,
 				8858EE8FF700094030EA6A25 /* Frameworks */,
-				213B968A22CF434A00D060FC /* WYASwiftMaterialTests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +282,7 @@
 				95CD11602122691A00331792 /* WYASwiftMaterial.app */,
 				95CD11742122691B00331792 /* WYASwiftMaterialTests.xctest */,
 				95CD117F2122691B00331792 /* WYASwiftMaterialUITests.xctest */,
+				9523894222D70DB9006646A2 /* WYASwiftMaterialUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -418,6 +442,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9523894122D70DB9006646A2 /* WYASwiftMaterialUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9523894B22D70DBC006646A2 /* Build configuration list for PBXNativeTarget "WYASwiftMaterialUnitTests" */;
+			buildPhases = (
+				9523893E22D70DB9006646A2 /* Sources */,
+				9523893F22D70DB9006646A2 /* Frameworks */,
+				9523894022D70DB9006646A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9523894822D70DB9006646A2 /* PBXTargetDependency */,
+			);
+			name = WYASwiftMaterialUnitTests;
+			productName = WYASwiftMaterialUnitTests;
+			productReference = 9523894222D70DB9006646A2 /* WYASwiftMaterialUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		95CD115F2122691A00331792 /* WYASwiftMaterial */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95CD11882122691B00331792 /* Build configuration list for PBXNativeTarget "WYASwiftMaterial" */;
@@ -481,10 +523,14 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WYA;
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = WeiYiAn;
 				TargetAttributes = {
+					9523894122D70DB9006646A2 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 95CD115F2122691A00331792;
+					};
 					95CD115F2122691A00331792 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1020;
@@ -516,11 +562,19 @@
 				95CD115F2122691A00331792 /* WYASwiftMaterial */,
 				95CD11732122691B00331792 /* WYASwiftMaterialTests */,
 				95CD117E2122691B00331792 /* WYASwiftMaterialUITests */,
+				9523894122D70DB9006646A2 /* WYASwiftMaterialUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9523894022D70DB9006646A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95CD115E2122691A00331792 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,6 +657,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9523893E22D70DB9006646A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9523894522D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95CD115C2122691A00331792 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,7 +709,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213B968C22CF434B00D060FC /* WYASwiftMaterialTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +722,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9523894822D70DB9006646A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95CD115F2122691A00331792 /* WYASwiftMaterial */;
+			targetProxy = 9523894722D70DB9006646A2 /* PBXContainerItemProxy */;
+		};
 		95CD11762122691B00331792 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 95CD115F2122691A00331792 /* WYASwiftMaterial */;
@@ -693,6 +759,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9523894922D70DBA006646A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3ZUS2FUB2;
+				INFOPLIST_FILE = WYASwiftMaterialUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiyian.WYASwiftMaterialUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYASwiftMaterial.app/WYASwiftMaterial";
+			};
+			name = Debug;
+		};
+		9523894A22D70DBA006646A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A3ZUS2FUB2;
+				INFOPLIST_FILE = WYASwiftMaterialUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiyian.WYASwiftMaterialUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYASwiftMaterial.app/WYASwiftMaterial";
+			};
+			name = Release;
+		};
 		95CD11862122691B00331792 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -944,6 +1055,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9523894B22D70DBC006646A2 /* Build configuration list for PBXNativeTarget "WYASwiftMaterialUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9523894922D70DBA006646A2 /* Debug */,
+				9523894A22D70DBA006646A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95CD115B2122691A00331792 /* Build configuration list for PBXProject "WYASwiftMaterial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

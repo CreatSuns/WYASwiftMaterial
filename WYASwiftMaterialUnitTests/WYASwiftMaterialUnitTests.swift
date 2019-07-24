@@ -1,14 +1,14 @@
 //
-//  WYASwiftMaterialTest.swift
-//  WYASwiftMaterialTests
+//  WYASwiftMaterialUnitTests.swift
+//  WYASwiftMaterialUnitTests
 //
-//  Created by 李世航 on 2019/7/5.
+//  Created by 李俊恒 on 2019/7/11.
 //  Copyright © 2019 WeiYiAn. All rights reserved.
 //
 
 import XCTest
 
-class WYASwiftMaterialTest: XCTestCase {
+class WYASwiftMaterialUnitTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,9 +19,9 @@ class WYASwiftMaterialTest: XCTestCase {
     }
 
     func testExample() {
-        print("asd")
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(true,"成功")
     }
 
     func testPerformanceExample() {
