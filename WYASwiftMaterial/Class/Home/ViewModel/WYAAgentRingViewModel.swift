@@ -47,3 +47,20 @@ class WYAAgentRingViewModel {
         }
     }
 }
+
+class WYAMoreCommentViewModel {
+    var list : [WYAMoreCommentsListItem]?
+
+    public func getMoreCommentsForAgentRing(params : [String : Any], handler: @escaping (Any) -> Void) {
+        BaseNetWork.requestData(.get, URLString: moreCommentsUrl, paramenters: params) { (result) in
+            var dic : WYAMoreCommentModel? = nil
+            do {
+                dic = try JSONDecoder().decode(WYAMoreCommentModel.self, from: result as! Data)
+            } catch {
+                wyaPrint(error)
+            }
+            self.list = dic?.data?.list
+            handler("")
+        }
+    }
+}

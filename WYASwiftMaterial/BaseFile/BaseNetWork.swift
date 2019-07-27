@@ -22,7 +22,10 @@ class BaseNetWork: NSObject {
    ///   - URLString: 请求的URlString
    ///   - paramenters: 需要拼接的参数如果为get请求可以不填写
    ///   - finishedCallback: 请求数据返回
-   class func requestData(_ type:MethodType,URLString:String,paramenters:[String : Any]? = nil ,finishedCallback:@escaping(_ result : Any)->()) {
+   class func requestData(_ type:MethodType,
+                          URLString:String,
+                          paramenters:[String : Any]? = nil,
+                          finishedCallback:@escaping(_ result : Any)->()) {
         // 1.获取请求的类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         var params : [String : Any]
@@ -59,8 +62,12 @@ class BaseNetWork: NSObject {
                     print(response.result.error!)// 请求出现错误会输出error
                     return
                 }
+                wyaPrint(result)
                 // 4.将结果回调出去
-                finishedCallback(response.data as Any)
+//                finishedCallback(response.data as Any)
+            }.responseData { (data) in
+                wyaPrint(data)
+                finishedCallback(data.data as Any)
             }
         }
 }

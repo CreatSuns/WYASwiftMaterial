@@ -16,3 +16,4 @@ let chooseProductLine = baseUrl + "material/account/set-admin-info.json"
 let agentRingCoverImageUrl = baseUrl + "material/agent-circle/cover-image.json"
 
 let agentRingList = baseUrl + "material/agent-circle/get-list.json"
+let moreCommentsUrl = baseUrl + "material/agent-circle/comment-list.json"

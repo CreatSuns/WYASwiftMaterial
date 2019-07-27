@@ -40,7 +40,7 @@ class WYABaseAgentRingCell: UITableViewCell {
 
     lazy var userReleaseContentLabel: UILabel = {
         let label = UILabel()
-        label.text = "占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字"
+        label.text = ""
         //        label.font = FONT(s: 11)
         //        label.textColor = wya_goldenLevelTextColor
         label.numberOfLines = 0

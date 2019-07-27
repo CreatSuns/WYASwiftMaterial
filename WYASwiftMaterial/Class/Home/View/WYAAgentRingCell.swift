@@ -59,6 +59,10 @@ class WYAAgentRingCell: WYABaseAgentRingCell {
         super.configCellWithIndexPath(indexPath: indexPath)
         let model = (self.viewModel as! WYAAgentRingViewModel).list[indexPath.section]
         wyaPrint(model)
+        setModel(model: model)
+    }
+
+    public func setModel(model:WYAAgentRingModel.WYAAgentRingListModel.WYAAgentRingListItemModel) {
         self.userNameLabel.text = model.agent_name
         self.userLevelLabel.text = model.agent_level_name
         self.userReleaseContentLabel.text = model.content

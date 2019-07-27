@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,12 @@
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
 		213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9622BB8BA200DDA4BE /* Dictionary.swift */; };
+		21619CE622E9506D007929AB /* MoreCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619CE522E9506D007929AB /* MoreCommentViewController.swift */; };
+		21619CE822E97E65007929AB /* MoreCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619CE722E97E65007929AB /* MoreCommentCell.swift */; };
+		21619CEA22E99BEB007929AB /* WYAMoreCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619CE922E99BEB007929AB /* WYAMoreCommentModel.swift */; };
+		21619CEC22EA9385007929AB /* SendDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619CEB22EA9384007929AB /* SendDynamicViewController.swift */; };
+		21619CEE22EAEC62007929AB /* cameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619CED22EAEC62007929AB /* cameraCell.swift */; };
+		21619D1222EBF49F007929AB /* editImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21619D1122EBF49F007929AB /* editImageCell.swift */; };
 		9523894522D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */; };
 		9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D321251EA8007AC364 /* BaseNetWork.swift */; };
 		9563B4D82125614C007AC364 /* ExampleNetWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */; };
@@ -92,6 +98,12 @@
 		213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAAgentRingModel.swift; sourceTree = "<group>"; };
 		213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginModel.swift; sourceTree = "<group>"; };
 		213CCE9622BB8BA200DDA4BE /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		21619CE522E9506D007929AB /* MoreCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCommentViewController.swift; sourceTree = "<group>"; };
+		21619CE722E97E65007929AB /* MoreCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCommentCell.swift; sourceTree = "<group>"; };
+		21619CE922E99BEB007929AB /* WYAMoreCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAMoreCommentModel.swift; sourceTree = "<group>"; };
+		21619CEB22EA9384007929AB /* SendDynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDynamicViewController.swift; sourceTree = "<group>"; };
+		21619CED22EAEC62007929AB /* cameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraCell.swift; sourceTree = "<group>"; };
+		21619D1122EBF49F007929AB /* editImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editImageCell.swift; sourceTree = "<group>"; };
 		61B855A68E73B3305E13ADD4 /* Pods-WYASwiftMaterial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftMaterial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial.debug.xcconfig"; sourceTree = "<group>"; };
 		7DBB0137EB4AFF0849D9A977 /* Pods-WYASwiftEnv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftEnv.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftEnv/Pods-WYASwiftEnv.release.xcconfig"; sourceTree = "<group>"; };
 		7E6490D80BEFB40E51FD9DE0 /* Pods_WYASwiftEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYASwiftEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +219,10 @@
 			children = (
 				211F645222BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift */,
 				211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */,
+				21619CE722E97E65007929AB /* MoreCommentCell.swift */,
 				2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */,
+				21619CED22EAEC62007929AB /* cameraCell.swift */,
+				21619D1122EBF49F007929AB /* editImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */,
+				21619CE922E99BEB007929AB /* WYAMoreCommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -427,6 +443,8 @@
 			isa = PBXGroup;
 			children = (
 				95CD11B1212275C700331792 /* HomeViewController.swift */,
+				21619CE522E9506D007929AB /* MoreCommentViewController.swift */,
+				21619CEB22EA9384007929AB /* SendDynamicViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -672,6 +690,7 @@
 				2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */,
 				211F643E22B9E93B00E9E2F6 /* LoginViewController.swift in Sources */,
 				9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */,
+				21619CEC22EA9385007929AB /* SendDynamicViewController.swift in Sources */,
 				95CD11B2212275C700331792 /* HomeViewController.swift in Sources */,
 				211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */,
 				213CCE8F22BB35FF00DDA4BE /* WYABaseAgentRingCell.swift in Sources */,
@@ -691,12 +710,17 @@
 				95CD11C42122D49000331792 /* PrintTool.swift in Sources */,
 				211F644922BA086400E9E2F6 /* WYAColor.swift in Sources */,
 				2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */,
+				21619CE822E97E65007929AB /* MoreCommentCell.swift in Sources */,
 				95CD11A4212269D500331792 /* AppDelegate.swift in Sources */,
 				213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */,
 				211F645522BA316000E9E2F6 /* UIView.swift in Sources */,
+				21619D1222EBF49F007929AB /* editImageCell.swift in Sources */,
 				95CD11BE2122ADB500331792 /* WYANoticName.swift in Sources */,
 				213B968922CEF44C00D060FC /* WYAAgentRingViewModel.swift in Sources */,
+				21619CEA22E99BEB007929AB /* WYAMoreCommentModel.swift in Sources */,
+				21619CE622E9506D007929AB /* MoreCommentViewController.swift in Sources */,
 				95CD11C02122ADC500331792 /* WYANetRequestUrl.swift in Sources */,
+				21619CEE22EAEC62007929AB /* cameraCell.swift in Sources */,
 				211F644D22BA2C8000E9E2F6 /* MaterialViewController.swift in Sources */,
 				95CD11AC21226CA100331792 /* RootControllerModel.swift in Sources */,
 				211F645322BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift in Sources */,

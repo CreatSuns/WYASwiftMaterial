@@ -12,6 +12,13 @@ class HomeViewController: BaseViewController {
     var viewModel = WYAAgentRingViewModel()
 
     // 懒加载模式
+    lazy var rightBarButton : UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        button.setTitle("发布", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.font = FONT(s: 15)
+        return button
+    }()
     lazy var tableView = {()->UITableView in
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight-WYATabBarHeight), style: .grouped)
             tableView.backgroundColor = UIColor.white
@@ -37,6 +44,8 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
         self.navTitle = "首页"
+
+        createNavigationItemRightBarButtonWithNormalTitle("发布", nil)
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         } else {
@@ -58,7 +67,7 @@ class HomeViewController: BaseViewController {
         tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {[weak self] in
             let model = self?.viewModel.list.last
 
-            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":model!.agent_id!], isHeaderRefresh: false, handle: {
+            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":model!.circle_pass_id!], isHeaderRefresh: false, handle: {
                 self?.tableView.mj_footer.endRefreshing()
                 self?.tableView.reloadData()
             })
@@ -69,6 +78,14 @@ class HomeViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func rightButtonClicked(sender: UIButton) {
+        super.rightButtonClicked(sender: sender)
+        let vc = SendDynamicViewController()
+        vc.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -95,6 +112,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot") as! WYAAgentRingFooterView
         footView.bindViewModel(viewModel: self.viewModel)
         footView.configFootWithIndexPath(section: section)
+        footView.moreCommentCallback = {[weak self] (model) in
+            let vc = MoreCommentViewController()
+            vc.model = self?.viewModel.list[section] as! WYAAgentRingModel.WYAAgentRingListModel.WYAAgentRingListItemModel
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+
         return footView
     }
 

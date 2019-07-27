@@ -41,9 +41,9 @@ class WYAAgentRingModel : Codable {
 
             var contentShow : Bool?
             var contentHeight: Float {
-                let height = UILabel.getHeightByWidth(ScreenWidth - 74 * SizeAdapter, title: content, font: FONT(s: 16))
+                var height = UILabel.getHeightByWidth(ScreenWidth - 74 * SizeAdapter, title: content, font: FONT(s: 16))
                 if height > 38 * SizeAdapter {
-
+                    height = 39 * SizeAdapter
                 }
                 return Float(height)
             }
@@ -241,7 +241,7 @@ extension WYAAgentRingModel {
             return 1.0/UIScreen.main.scale
         }
         let number = model.comment!.count > 2 ? 2 : model.comment!.count
-        for i in 0...number {
+        for i in 0..<number {
             let item = model.comment![i]
             getEachCommentHeight(commentModel: item)
         }

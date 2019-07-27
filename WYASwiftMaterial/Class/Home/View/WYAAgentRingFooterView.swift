@@ -12,6 +12,9 @@ class WYAAgentRingFooterView: UITableViewHeaderFooterView {
     var viewModel : (Any)? = nil
     var index : Int = 0
 
+    typealias callback = (_ model:WYAAgentRingModel.WYAAgentRingListModel.WYAAgentRingListItemModel) -> Void
+    public var moreCommentCallback : callback!
+
     let bgView: UIView = {
         let view = UIView(frame: CGRect(x: 62 * SizeAdapter, y: 0, width: ScreenWidth - 74 * SizeAdapter, height: 80))
         view.backgroundColor = wya_bgColor
@@ -29,9 +32,7 @@ class WYAAgentRingFooterView: UITableViewHeaderFooterView {
         button.titleLabel?.font = FONT(s: 13)
         button.isHidden = true
         button.contentVerticalAlignment = .top
-        button.addCallBackAction({ (button) in
-
-        })
+        button.addTarget(self, action: #selector(moreCommentClick), for: .touchUpInside)
         return button
     }()
 
@@ -67,6 +68,9 @@ class WYAAgentRingFooterView: UITableViewHeaderFooterView {
         line.frame = CGRect(x: 0, y: contentView.cmam_height - 1.0/UIScreen.main.scale, width: ScreenWidth, height: 1.0/UIScreen.main.scale)
     }
 
+    @objc func moreCommentClick(){
+        self.moreCommentCallback((self.viewModel as! WYAAgentRingViewModel).list[self.index])
+    }
 }
 
 extension WYAAgentRingFooterView {
