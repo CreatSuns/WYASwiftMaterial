@@ -65,8 +65,8 @@ class WYALoginModel: BaseNetWork {
             } catch let error {
                 wyaPrint(error)
             }
-//            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
-//            UserDefaults.standard.synchronize()
+            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
+            UserDefaults.standard.synchronize()
             handle(model ?? WYALoginDataModel())
         }
     }
