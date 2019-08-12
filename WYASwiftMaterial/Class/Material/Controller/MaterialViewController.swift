@@ -12,7 +12,11 @@ class MaterialViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navTitle = "素材库"
+        isShowNavLine = false
+        navTitleColor = .white
+        navtitleFont = 18
+        navigationController?.navigationBar.barTintColor = .gray
         // Do any additional setup after loading the view.
     }
     

@@ -83,23 +83,3 @@ let deleteAgentRing = baseUrl + "material/agent-circle/del.json"
 
 let mineGetUserInfo = baseUrl + "material/account/get-user-info.json"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

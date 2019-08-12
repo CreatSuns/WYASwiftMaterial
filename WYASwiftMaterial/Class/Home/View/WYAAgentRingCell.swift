@@ -59,12 +59,22 @@ class WYAAgentRingCell: WYABaseAgentRingCell {
         super.configCellWithIndexPath(indexPath: indexPath)
         let model = (self.viewModel as! WYAAgentRingViewModel).list[indexPath.section]
         wyaPrint(model)
+        setModel(model: model)
+    }
+
+    public func setModel(model:WYAAgentRingModel.WYAAgentRingListModel.WYAAgentRingListItemModel) {
         self.userNameLabel.text = model.agent_name
         self.userLevelLabel.text = model.agent_level_name
         self.userReleaseContentLabel.text = model.content
         height = model.contentHeight
         userReleaseImagesView.images(model.image!)
         imageHeight = model.imageSuperHeight
+        if model.contentHeight > Float(38 * SizeAdapter) {
+            self.showButton.isHidden = false
+        } else {
+            self.showButton.isHidden = true
+        }
+        actionBar.praiseButton.setTitle(String(model.point_num!), for: .normal)
         self.layoutIfNeeded()
     }
 }

@@ -12,6 +12,13 @@ class HomeViewController: BaseViewController {
     var viewModel = WYAAgentRingViewModel()
 
     // 懒加载模式
+    lazy var rightBarButton : UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
+        button.setTitle("发布", for: .normal)
+        button.setTitleColor(.red, for: .normal)
+        button.titleLabel?.font = FONT(s: 15)
+        return button
+    }()
     lazy var tableView = {()->UITableView in
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight-WYATabBarHeight), style: .grouped)
             tableView.backgroundColor = UIColor.white
@@ -30,15 +37,15 @@ class HomeViewController: BaseViewController {
         viewModel.fetchAgentRingCoverImage { (string) in
             (self.tableView.tableHeaderView as! WYAAgentRingCoverView).agentRingCoverImageView.sd_setImage(with: URL(string: string), placeholderImage: UIImage(named: "pic_shouyebackground"), options: .retryFailed, context: nil)
         }
-//        viewModel.fetchAgentRingList(params: ["pageSize":10,"circle_pass_id":0]) {
-//            self.tableView.reloadData()
-//        }
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
         self.navTitle = "首页"
+
+        createNavigationItemRightBarButtonWithNormalTitle("发布", nil)
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         } else {
@@ -48,11 +55,37 @@ class HomeViewController: BaseViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+
+        tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [weak self] in
+
+            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":0], isHeaderRefresh: true, handle: {
+                self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
+            })
+        })
+
+        tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {[weak self] in
+            let model = self?.viewModel.list.last
+
+            self?.viewModel.fetchAgentRingList(params: ["pageSize":15,"circle_pass_id":model!.circle_pass_id!], isHeaderRefresh: false, handle: {
+                self?.tableView.mj_footer.endRefreshing()
+                self?.tableView.reloadData()
+            })
+        })
+        tableView.mj_header.beginRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func rightButtonClicked(sender: UIButton) {
+        super.rightButtonClicked(sender: sender)
+        let vc = SendDynamicViewController()
+        vc.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -76,8 +109,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot")
+        let footView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "foot") as! WYAAgentRingFooterView
+        footView.bindViewModel(viewModel: self.viewModel)
+        footView.configFootWithIndexPath(section: section)
+        footView.moreCommentCallback = {[weak self] (model) in
+            let vc = MoreCommentViewController()
+            vc.model = self?.viewModel.list[section] as! WYAAgentRingModel.WYAAgentRingListModel.WYAAgentRingListItemModel
+            vc.hidesBottomBarWhenPushed = true
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
+
         return footView
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,8 +131,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 80
+        let height = CGFloat(viewModel.list[section].footHeight)
+        return height
     }
+
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        

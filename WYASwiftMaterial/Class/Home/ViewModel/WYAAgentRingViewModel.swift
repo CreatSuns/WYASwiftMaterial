@@ -21,13 +21,18 @@ class WYAAgentRingViewModel {
 
     }
 
-    public func fetchAgentRingList(params:[String:Int], handle: @escaping () -> Void) {
+    public func fetchAgentRingList(params:[String:Int], isHeaderRefresh:Bool, handle: @escaping () -> Void) {
         BaseNetWork.requestData(.get, URLString: agentRingList, paramenters: params) { (result) in
             var dic : WYAAgentRingModel? = nil
 
             do {
                 dic = try JSONDecoder().decode(WYAAgentRingModel.self, from: result as! Data)
-                self.list = (dic?.data?.list!)!
+                if isHeaderRefresh == true {
+                    self.list = (dic?.data?.list!)!
+                } else {
+                    self.list = self.list + (dic?.data?.list)!
+                }
+
             } catch let err {
                 print(err)
             }
@@ -36,8 +41,26 @@ class WYAAgentRingViewModel {
             encoder.outputFormatting = .prettyPrinted
             let data = try! encoder.encode(dic)
             print(String(data: data, encoding: .utf8)!)
+            dic?.data?.list![0].contentShow = true
 
             handle()
+        }
+    }
+}
+
+class WYAMoreCommentViewModel {
+    var list : [WYAMoreCommentsListItem]?
+
+    public func getMoreCommentsForAgentRing(params : [String : Any], handler: @escaping (Any) -> Void) {
+        BaseNetWork.requestData(.get, URLString: moreCommentsUrl, paramenters: params) { (result) in
+            var dic : WYAMoreCommentModel? = nil
+            do {
+                dic = try JSONDecoder().decode(WYAMoreCommentModel.self, from: result as! Data)
+            } catch {
+                wyaPrint(error)
+            }
+            self.list = dic?.data?.list
+            handler("")
         }
     }
 }

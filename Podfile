@@ -12,6 +12,7 @@ pod 'MJRefresh','~>3.1.15.1'
 pod 'SQLite.swift','~>0.11.4'
 # layout类似于Masonry
 pod 'SnapKit','~>4.0.0'
+
 pod 'WYAKit'
 pod 'RealmSwift'
 #pod 'WYAKit', :path => '/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit'

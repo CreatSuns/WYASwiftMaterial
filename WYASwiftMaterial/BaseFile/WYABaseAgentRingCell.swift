@@ -40,7 +40,7 @@ class WYABaseAgentRingCell: UITableViewCell {
 
     lazy var userReleaseContentLabel: UILabel = {
         let label = UILabel()
-        label.text = "占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字占位文字"
+        label.text = ""
         //        label.font = FONT(s: 11)
         //        label.textColor = wya_goldenLevelTextColor
         label.numberOfLines = 0
@@ -54,6 +54,7 @@ class WYABaseAgentRingCell: UITableViewCell {
         button.setTitleColor(wya_blueColor, for: .normal)
         button.titleLabel?.font = FONT(s: 15)
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
+        button.addTarget(self, action: #selector(showClick), for: .touchUpInside)
         return button
     }()
 
@@ -162,6 +163,10 @@ class WYABaseAgentRingCell: UITableViewCell {
     public func configCellWithIndexPath(indexPath:IndexPath) {
         self.indexPath = indexPath
     }
+
+    @objc func showClick() {
+        
+    }
 }
 
 extension WYABaseAgentRingCell {
@@ -184,7 +189,10 @@ class WYAImageContainerView: UIView {
         }
         for string in images {
             let button = UIButton(type: .custom)
-            button.sd_setBackgroundImage(with: URL(string: string), for: .normal, completed: nil)
+            button.sd_setBackgroundImage(with: URL(string: string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""), for: .normal) { (image, error, type, url) in
+                print(error as Any)
+                print(image as Any)
+            }
             button.contentMode = .scaleAspectFill
             button.imageView?.contentMode = .scaleAspectFill
             button.contentHorizontalAlignment = .fill
@@ -242,20 +250,40 @@ class WYAActionBar: UIView {
     }()
 
     lazy var collectionButton: UIButton = {
+        var space = CGFloat(6)
         let button = UIButton(type: .custom)
         button.setTitle("收藏", for: .normal)
         button.setTitleColor(wya_textBlackColor, for: .normal)
         button.titleLabel?.font = FONT(s: 13)
         button.setImage(UIImage(named: "icon_collect"), for: .normal)
         button.setImage(UIImage(named: "icon_collect_press"), for: .selected)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, -space / 2.0, 0, space / 2.0)
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, space / 2.0, 0, -space / 2.0)
+        button.addCallBackAction({ (button) in
+            button!.isSelected = !button!.isSelected
+            var anim = CAKeyframeAnimation(keyPath: "transform.scale")
+            anim.values                = [ 1.0, 0.8, 1.0, 1.2, 1.0 ];
+            anim.duration              = 0.5;
+            button!.imageView!.layer.add(anim, forKey: nil)
+        })
         return button
     }()
 
     lazy var praiseButton: UIButton = {
+        var space = CGFloat(6)
         let button = UIButton(type: .custom)
         button.setTitleColor(wya_textBlackColor, for: .normal)
         button.setImage(UIImage(named: "icon_dianzan"), for: .normal)
         button.setImage(UIImage(named: "icon_dianzan_press"), for: .selected)
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, -space / 2.0, 0, space / 2.0)
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, space / 2.0, 0, -space / 2.0)
+        button.addCallBackAction({ (button) in
+            button!.isSelected = !button!.isSelected
+            var anim = CAKeyframeAnimation(keyPath: "transform.scale")
+            anim.values                = [ 1.0, 0.8, 1.0, 1.2, 1.0 ];
+            anim.duration              = 0.5;
+            button!.imageView!.layer.add(anim, forKey: nil)
+        })
         return button
     }()
 
