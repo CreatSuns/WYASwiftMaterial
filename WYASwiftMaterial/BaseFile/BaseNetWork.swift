@@ -66,9 +66,7 @@ class BaseNetWork: NSObject {
                     print(response.result.error!)// 请求出现错误会输出error
                     return
                 }
-                wyaPrint(result)
                 // 4.将结果回调出去
-
             wyaPrint("请求结果:\(response.result)")
                 finishedCallback(response.data as Any)
             }.responseData { (data) in

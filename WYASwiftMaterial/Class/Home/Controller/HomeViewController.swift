@@ -45,7 +45,7 @@ class HomeViewController: BaseViewController {
         self.view.addSubview(self.tableView)
         self.navTitle = "首页"
 
-        createNavigationItemRightBarButtonWithNormalTitle("发布", nil)
+//        createNavigationItemRightBarButtonWithNormalTitle("发布", nil)
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         } else {
@@ -80,13 +80,13 @@ class HomeViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func rightButtonClicked(sender: UIButton) {
-        super.rightButtonClicked(sender: sender)
-        let vc = SendDynamicViewController()
-        vc.hidesBottomBarWhenPushed = true
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    override func rightButtonClicked(sender: UIButton) {
+//        super.rightButtonClicked(sender: sender)
+//        let vc = SendDynamicViewController()
+//        vc.hidesBottomBarWhenPushed = true
+//
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
 

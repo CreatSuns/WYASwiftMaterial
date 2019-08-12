@@ -24,6 +24,12 @@
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
 		213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9622BB8BA200DDA4BE /* Dictionary.swift */; };
+		95131B26230103DD0036CFEF /* MoreCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B24230103DC0036CFEF /* MoreCommentViewController.swift */; };
+		95131B27230103DD0036CFEF /* SendDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B25230103DD0036CFEF /* SendDynamicViewController.swift */; };
+		95131B29230103E90036CFEF /* WYAMoreCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B28230103E90036CFEF /* WYAMoreCommentModel.swift */; };
+		95131B2D230104350036CFEF /* cameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B2A230104350036CFEF /* cameraCell.swift */; };
+		95131B2E230104350036CFEF /* editImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B2B230104350036CFEF /* editImageCell.swift */; };
+		95131B2F230104350036CFEF /* MoreCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131B2C230104350036CFEF /* MoreCommentCell.swift */; };
 		9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */; };
 		9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */; };
 		9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */; };
@@ -97,6 +103,12 @@
 		61B855A68E73B3305E13ADD4 /* Pods-WYASwiftMaterial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftMaterial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial.debug.xcconfig"; sourceTree = "<group>"; };
 		7DBB0137EB4AFF0849D9A977 /* Pods-WYASwiftEnv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftEnv.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftEnv/Pods-WYASwiftEnv.release.xcconfig"; sourceTree = "<group>"; };
 		7E6490D80BEFB40E51FD9DE0 /* Pods_WYASwiftEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYASwiftEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95131B24230103DC0036CFEF /* MoreCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreCommentViewController.swift; sourceTree = "<group>"; };
+		95131B25230103DD0036CFEF /* SendDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDynamicViewController.swift; sourceTree = "<group>"; };
+		95131B28230103E90036CFEF /* WYAMoreCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYAMoreCommentModel.swift; sourceTree = "<group>"; };
+		95131B2A230104350036CFEF /* cameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraCell.swift; sourceTree = "<group>"; };
+		95131B2B230104350036CFEF /* editImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editImageCell.swift; sourceTree = "<group>"; };
+		95131B2C230104350036CFEF /* MoreCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreCommentCell.swift; sourceTree = "<group>"; };
 		9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineModel.swift; sourceTree = "<group>"; };
 		9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineViewController.swift; sourceTree = "<group>"; };
 		9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductTableViewCell.swift; sourceTree = "<group>"; };
@@ -211,6 +223,9 @@
 		211F645122BA2EEB00E9E2F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95131B2A230104350036CFEF /* cameraCell.swift */,
+				95131B2B230104350036CFEF /* editImageCell.swift */,
+				95131B2C230104350036CFEF /* MoreCommentCell.swift */,
 				211F645222BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift */,
 				211F645622BA39E800E9E2F6 /* WYAAgentRingCell.swift */,
 				2121346022CCA6620012BDEE /* WYAAgentRingFooterView.swift */,
@@ -229,6 +244,7 @@
 		213CCE9022BB5AB700DDA4BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				95131B28230103E90036CFEF /* WYAMoreCommentModel.swift */,
 				213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */,
 			);
 			path = Model;
@@ -424,6 +440,8 @@
 		95CD11AD2122732500331792 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95131B24230103DC0036CFEF /* MoreCommentViewController.swift */,
+				95131B25230103DD0036CFEF /* SendDynamicViewController.swift */,
 				95CD11B1212275C700331792 /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -670,6 +688,7 @@
 				9545FE4C22FBC9AC002D5E1B /* WYALoginLocalModel.swift in Sources */,
 				2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */,
 				211F643E22B9E93B00E9E2F6 /* LoginViewController.swift in Sources */,
+				95131B27230103DD0036CFEF /* SendDynamicViewController.swift in Sources */,
 				9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */,
 				9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */,
 				9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */,
@@ -688,20 +707,25 @@
 				211F644F22BA2EAC00E9E2F6 /* LoginView.swift in Sources */,
 				95CD11BC2122AD9C00331792 /* WYAMacros.swift in Sources */,
 				95CD11C42122D49000331792 /* PrintTool.swift in Sources */,
+				95131B29230103E90036CFEF /* WYAMoreCommentModel.swift in Sources */,
 				956345D922F95C150024841C /* WYAConst.swift in Sources */,
 				211F644922BA086400E9E2F6 /* WYAColor.swift in Sources */,
 				2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */,
 				95CD11A4212269D500331792 /* AppDelegate.swift in Sources */,
 				213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */,
 				211F645522BA316000E9E2F6 /* UIView.swift in Sources */,
+				95131B26230103DD0036CFEF /* MoreCommentViewController.swift in Sources */,
 				95CD11BE2122ADB500331792 /* WYANoticName.swift in Sources */,
 				213B968922CEF44C00D060FC /* WYAAgentRingViewModel.swift in Sources */,
 				95CD11C02122ADC500331792 /* WYANetRequestUrl.swift in Sources */,
 				211F644D22BA2C8000E9E2F6 /* MaterialViewController.swift in Sources */,
+				95131B2F230104350036CFEF /* MoreCommentCell.swift in Sources */,
 				95CD11AC21226CA100331792 /* RootControllerModel.swift in Sources */,
+				95131B2D230104350036CFEF /* cameraCell.swift in Sources */,
 				211F645322BA2F3E00E9E2F6 /* WYAAgentRingCoverView.swift in Sources */,
 				95CD11C22122ADD800331792 /* WYAThirdClassHeader.swift in Sources */,
 				95CD11B42122866900331792 /* MineViewController.swift in Sources */,
+				95131B2E230104350036CFEF /* editImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
