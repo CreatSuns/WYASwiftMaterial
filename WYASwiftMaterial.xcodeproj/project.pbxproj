@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,11 +24,13 @@
 		213CCE9222BB5AFE00DDA4BE /* WYAAgentRingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9122BB5AFE00DDA4BE /* WYAAgentRingModel.swift */; };
 		213CCE9422BB5EC700DDA4BE /* WYALoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */; };
 		213CCE9722BB8BA300DDA4BE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213CCE9622BB8BA200DDA4BE /* Dictionary.swift */; };
+		9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */; };
+		9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */; };
+		9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */; };
 		9523894522D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */; };
+		9545FE4C22FBC9AC002D5E1B /* WYALoginLocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9545FE4B22FBC9AC002D5E1B /* WYALoginLocalModel.swift */; };
+		956345D922F95C150024841C /* WYAConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956345D822F95C150024841C /* WYAConst.swift */; };
 		9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D321251EA8007AC364 /* BaseNetWork.swift */; };
-		9563B4D82125614C007AC364 /* ExampleNetWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */; };
-		9563B4DA21256161007AC364 /* ExampleNavSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4D921256161007AC364 /* ExampleNavSetVC.swift */; };
-		9563B4DC2125618B007AC364 /* ExampleNavBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563B4DB2125618B007AC364 /* ExampleNavBarVC.swift */; };
 		95CD11A4212269D500331792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CD119A212269D500331792 /* AppDelegate.swift */; };
 		95CD11A5212269D500331792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CD119C212269D500331792 /* LaunchScreen.storyboard */; };
 		95CD11A7212269D500331792 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CD11A0212269D500331792 /* Assets.xcassets */; };
@@ -95,13 +97,15 @@
 		61B855A68E73B3305E13ADD4 /* Pods-WYASwiftMaterial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftMaterial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftMaterial/Pods-WYASwiftMaterial.debug.xcconfig"; sourceTree = "<group>"; };
 		7DBB0137EB4AFF0849D9A977 /* Pods-WYASwiftEnv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYASwiftEnv.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYASwiftEnv/Pods-WYASwiftEnv.release.xcconfig"; sourceTree = "<group>"; };
 		7E6490D80BEFB40E51FD9DE0 /* Pods_WYASwiftEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYASwiftEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineModel.swift; sourceTree = "<group>"; };
+		9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineViewController.swift; sourceTree = "<group>"; };
+		9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductTableViewCell.swift; sourceTree = "<group>"; };
 		9523894222D70DB9006646A2 /* WYASwiftMaterialUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftMaterialUnitTests.swift; sourceTree = "<group>"; };
 		9523894622D70DB9006646A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9545FE4B22FBC9AC002D5E1B /* WYALoginLocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYALoginLocalModel.swift; sourceTree = "<group>"; };
+		956345D822F95C150024841C /* WYAConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAConst.swift; sourceTree = "<group>"; };
 		9563B4D321251EA8007AC364 /* BaseNetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetWork.swift; sourceTree = "<group>"; };
-		9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNetWorkVC.swift; sourceTree = "<group>"; };
-		9563B4D921256161007AC364 /* ExampleNavSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavSetVC.swift; sourceTree = "<group>"; };
-		9563B4DB2125618B007AC364 /* ExampleNavBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleNavBarVC.swift; sourceTree = "<group>"; };
 		95CD11602122691A00331792 /* WYASwiftMaterial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYASwiftMaterial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CD11742122691B00331792 /* WYASwiftMaterialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CD117F2122691B00331792 /* WYASwiftMaterialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				211F643D22B9E93B00E9E2F6 /* LoginViewController.swift */,
+				9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				211F644E22BA2EAC00E9E2F6 /* LoginView.swift */,
 				2121345822CC49B30012BDEE /* WYABottomLineTextField.h */,
 				2121345922CC49B30012BDEE /* WYABottomLineTextField.m */,
+				9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				213CCE9322BB5EC700DDA4BE /* WYALoginModel.swift */,
+				9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */,
+				9545FE4B22FBC9AC002D5E1B /* WYALoginLocalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,7 +305,6 @@
 				95CD1194212269D400331792 /* Extension */,
 				95CD1196212269D500331792 /* Class */,
 				95CD11A1212269D500331792 /* Config */,
-				95CD1195212269D400331792 /* Example */,
 				95CD11A2212269D500331792 /* Info.plist */,
 				95CD1191212269D400331792 /* RootController */,
 			);
@@ -338,16 +345,6 @@
 				213CCE9622BB8BA200DDA4BE /* Dictionary.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		95CD1195212269D400331792 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				9563B4D72125614C007AC364 /* ExampleNetWorkVC.swift */,
-				9563B4D921256161007AC364 /* ExampleNavSetVC.swift */,
-				9563B4DB2125618B007AC364 /* ExampleNavBarVC.swift */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		95CD1196212269D500331792 /* Class */ = {
@@ -408,6 +405,7 @@
 				95CD11C32122D49000331792 /* PrintTool.swift */,
 				211F643F22BA031400E9E2F6 /* WYASwiftMaterial-Bridging-Header.h */,
 				211F644822BA086400E9E2F6 /* WYAColor.swift */,
+				956345D822F95C150024841C /* WYAConst.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -669,8 +667,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9545FE4C22FBC9AC002D5E1B /* WYALoginLocalModel.swift in Sources */,
 				2121345A22CC49B30012BDEE /* WYABottomLineTextField.m in Sources */,
 				211F643E22B9E93B00E9E2F6 /* LoginViewController.swift in Sources */,
+				9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */,
+				9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */,
+				9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */,
 				9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */,
 				95CD11B2212275C700331792 /* HomeViewController.swift in Sources */,
 				211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */,
@@ -684,11 +686,9 @@
 				95CD11BA2122AD8D00331792 /* WYABaseConfig.swift in Sources */,
 				95CD11CD212419D900331792 /* String.swift in Sources */,
 				211F644F22BA2EAC00E9E2F6 /* LoginView.swift in Sources */,
-				9563B4DA21256161007AC364 /* ExampleNavSetVC.swift in Sources */,
 				95CD11BC2122AD9C00331792 /* WYAMacros.swift in Sources */,
-				9563B4D82125614C007AC364 /* ExampleNetWorkVC.swift in Sources */,
-				9563B4DC2125618B007AC364 /* ExampleNavBarVC.swift in Sources */,
 				95CD11C42122D49000331792 /* PrintTool.swift in Sources */,
+				956345D922F95C150024841C /* WYAConst.swift in Sources */,
 				211F644922BA086400E9E2F6 /* WYAColor.swift in Sources */,
 				2121346122CCA6620012BDEE /* WYAAgentRingFooterView.swift in Sources */,
 				95CD11A4212269D500331792 /* AppDelegate.swift in Sources */,

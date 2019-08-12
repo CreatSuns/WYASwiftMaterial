@@ -89,23 +89,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         var vc:BaseViewController?
-        switch indexPath.row {
-        case 0:
-            vc = ExampleNavBarVC()
-            break
-        case 1:
-            vc = EXampleNavSetVC()
-            break
-            
-        case 2:
-            vc = ExampleNetWorkVC()
-            break
-        default:
-            break
-        }
-        vc?.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(vc!, animated: true)
+       
     }
 }
 

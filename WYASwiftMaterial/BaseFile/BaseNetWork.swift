@@ -31,7 +31,6 @@ class BaseNetWork: NSObject {
         } else {
             params = paramenters!
         }
-
         params["timestamp"] = NSDate.getNowTimeTimesSeconds()
         params["nonce_str"] = NSString.wya_randomString(withLength: 32)
         // 2.发送网络请求
@@ -52,14 +51,20 @@ class BaseNetWork: NSObject {
         } else {
             coding = URLEncoding.default
         }
+        wyaPrint("请求方式:\(method)")
+        wyaPrint("请求地址:\(URLString)")
+        wyaPrint("请求头:\(headers)")
+        wyaPrint("请求参数:\(params)")
+
 
         Alamofire.request(URLString, method: method, parameters: params, encoding: coding, headers:headers).responseJSON { (response) in
                 // 3.获取结果
-                guard let result = response.result.value else {
+            guard response.result.value != nil else {
                     print(response.result.error!)// 请求出现错误会输出error
                     return
                 }
                 // 4.将结果回调出去
+            wyaPrint("请求结果:\(response.result)")
                 finishedCallback(response.data as Any)
             }
         }

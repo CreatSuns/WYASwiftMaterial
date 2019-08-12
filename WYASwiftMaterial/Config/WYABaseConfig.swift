@@ -60,4 +60,3 @@ let Window = UIApplication.shared.keyWindow
 func wyaPrint(_ item:Any) -> Void {
     PrintTool.debugPrint(item)
 }
-

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if token != nil {
             window?.rootViewController = RootViewController()
         } else {
-            window?.rootViewController = LoginViewController()
+            window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
         }
 
         window?.makeKeyAndVisible()

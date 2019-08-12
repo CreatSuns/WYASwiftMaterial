@@ -26,6 +26,7 @@ struct WYALoginDataModel : Codable {
             var agent_name : String?
             var brand_logo : String?
             var member_id : Int?
+            var ischoose : Bool?
         }
         var user_id : Int?
         var access_token : String?
@@ -42,6 +43,7 @@ struct WYALoginDataModel : Codable {
 }
 
 class WYALoginModel: BaseNetWork {
+
     public class func login (_ userName : String, _ password : String, handle:@escaping (WYALoginDataModel) -> Void) {
         let params = ["mobile":userName.replacingOccurrences(of: " ", with: ""),
                       "pwd":password,
@@ -49,27 +51,32 @@ class WYALoginModel: BaseNetWork {
                       "device_token":""] as [String : Any]
 
         WYALoginModel.requestData(.post, URLString: loginUrl, paramenters: params) { (result) in
-            print(result)
+            wyaPrint("请求结果:\(result)")
             var model : WYALoginDataModel? = nil
             do {
                 model = try JSONDecoder().decode(WYALoginDataModel.self, from: result as! Data)
+                let agentArray:Array<WYALoginDataModel.WYALoginUserInfoModel.WYAAgentItem> = (model?.data?.agent!)!
+                guard agentArray.count >= 1 else{
+                    return
+                }
+                for var item in agentArray{
+                        item.ischoose = false
+                }
             } catch let error {
                 wyaPrint(error)
             }
-            wyaPrint(model?.data?.agent![0].admin_id?.bool)
-            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
-            UserDefaults.standard.synchronize()
-//            handle(model ?? WYALoginDataModel())
-            if model?.data?.agent?.count ?? 0 > 0 {
-                choosePL((model?.data?.agent![0])!)
-            }
+//            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
+//            UserDefaults.standard.synchronize()
+            handle(model ?? WYALoginDataModel())
+        }
+    }
 
+    static func chooseProductLin(adminId:Int,handle:@escaping (Any)-> Void){
+        let params = ["admin_id":adminId]
+        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params) { (result) in
+            handle(result)
         }
+
     }
-    class func choosePL(_ model : WYALoginDataModel.WYALoginUserInfoModel.WYAAgentItem) -> Void {
-        let params = ["admin_id":model.admin_id?.int]
-        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params as [String : Any]) { (result) in
-            Window?.rootViewController = RootViewController()
-        }
-    }
+
 }

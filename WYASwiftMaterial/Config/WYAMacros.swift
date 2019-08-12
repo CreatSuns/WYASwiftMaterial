@@ -24,5 +24,20 @@ let cachePath = NSHomeDirectory() + "/Library/Caches"
 /// 用于存放临时文件，保存应用程序再次启动过程中不需要的信息，重启后清空。
 let tempDir = NSHomeDirectory() + "/tmp"
 
+//func wyaUSerDefaultSetObjectForkey(value:Any,key:String){
+//        UserDefaults.standard.set(value, forKey: key)
+//        UserDefaults.standard.synchronize()
+//
+//}
+//
+//func wyaUserDefaultObjectForKey(key:String)->Any{
+//    return UserDefaults.standard.object(forKey: key) as Any
+//
+//}
+//
+//func wyaUserDefaultRemoveObjectForKey(key:String){
+//    UserDefaults.standard.removeObject(forKey: key)
+//    UserDefaults.standard.synchronize()
+//}
 
 

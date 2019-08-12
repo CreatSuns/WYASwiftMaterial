@@ -11,7 +11,7 @@ import UIKit
 class LoginView: UIView {
 
     typealias callback = (String?, String?) -> Void
-    public var nativeCallback : callback!
+    public var loginButtonback : callback!
 
     lazy var bgImageView : UIImageView = {
         let bgImageView = UIImageView(frame: self.frame)
@@ -173,6 +173,6 @@ class LoginView: UIView {
     }
 
     @objc func buttonClick() {
-        nativeCallback(usernameTF.text, passwordTF.text)
+        loginButtonback(usernameTF.text, passwordTF.text)
     }
 }

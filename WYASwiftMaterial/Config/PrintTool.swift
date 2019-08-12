@@ -21,4 +21,12 @@ class PrintTool: NSObject {
     
         #endif
     }
+    
+    static func getBaseUrl()->String{
+        #if DEBUG
+        return "https://gateway-mobile.wyawds.com/"
+        #else
+        return "https://gateway-mobile.weiyianmd.com/"
+        #endif
+    }
 }

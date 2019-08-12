@@ -78,9 +78,6 @@
     ],
     "SSKeychain": [
 
-    ],
-    "YogaKit": [
-      "~> 1.14.0"
     ]
   },
   "swift_version": "5.0"
