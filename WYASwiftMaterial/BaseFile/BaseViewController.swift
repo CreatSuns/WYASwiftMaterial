@@ -143,6 +143,18 @@ class BaseViewController: UIViewController,WYANavBarDelegate,UIGestureRecognizer
     override func didReceiveMemoryWarning() {
 
     }
+// MARK: public event methods
+    func wya_goback() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    func wya_customleftBarButtonItemPressed(sender:UIButton) {
+        wyaPrint(sender.titleLabel?.text ?? "")
+    }
+
+    func wya_customrRightBarButtonItemPressed(sender:UIButton) {
+        wyaPrint(sender.titleLabel?.text ?? "")
+    }
 
 }
 
@@ -201,20 +213,8 @@ extension BaseViewController{
     }
 }
 
-// MARK: public event methods
-extension BaseViewController{
-    func wya_goback() {
-        self.navigationController?.popViewController(animated: true)
-    }
 
-    func wya_customleftBarButtonItemPressed(sender:UIButton) {
-        wyaPrint(sender.titleLabel?.text ?? "")
-    }
 
-    func wya_customrRightBarButtonItemPressed(sender:UIButton) {
-        wyaPrint(sender.titleLabel?.text ?? "")
-    }
-}
 
 // MARK: 是否需要更新提示
 extension BaseViewController{
