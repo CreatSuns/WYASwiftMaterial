@@ -68,7 +68,6 @@ class WYALoginLocalModelTool: NSObject {
                                                    "brand_logo":item.brand_logo!,
                                                    "member_id":item.member_id ?? 0,
                                                    "isChoose":item.ischoose ?? false])
-
             try! realm.write {
                 realm.add(model)
             }

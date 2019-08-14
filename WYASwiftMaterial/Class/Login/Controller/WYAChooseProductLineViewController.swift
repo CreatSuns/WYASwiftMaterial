@@ -120,9 +120,10 @@ extension WYAChooseProductLineViewController{
 extension WYAChooseProductLineViewController{
     func enterHome() {
         let model = WYALoginLocalModelTool.lookpLoginAgentListData(whereString: "isChoose=true")
-        WYALoginModel.chooseProductLin(adminId: model.admin_id) { (result) in
-            wyaPrint(result)
-        }
+        WYALoginModel.chooseProductLin(adminId: model.admin_id, success: { (data) in
+            wyaPrint(data)
+        }) { (error) in
 
+        }
     }
 }

@@ -33,6 +33,7 @@
 		9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */; };
 		9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */; };
 		9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */; };
+		95166FA42303DAE100A52662 /* WYAJSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95166FA32303DAE100A52662 /* WYAJSONDecode.swift */; };
 		9523894522D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */; };
 		9545FE4C22FBC9AC002D5E1B /* WYALoginLocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9545FE4B22FBC9AC002D5E1B /* WYALoginLocalModel.swift */; };
 		956345D922F95C150024841C /* WYAConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956345D822F95C150024841C /* WYAConst.swift */; };
@@ -112,6 +113,7 @@
 		9513659122E8432900A88CF5 /* WYAChooseProductLineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineModel.swift; sourceTree = "<group>"; };
 		9513659322E8436400A88CF5 /* WYAChooseProductLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductLineViewController.swift; sourceTree = "<group>"; };
 		9513659522E8451900A88CF5 /* WYAChooseProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAChooseProductTableViewCell.swift; sourceTree = "<group>"; };
+		95166FA32303DAE100A52662 /* WYAJSONDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYAJSONDecode.swift; sourceTree = "<group>"; };
 		9523894222D70DB9006646A2 /* WYASwiftMaterialUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYASwiftMaterialUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9523894422D70DB9006646A2 /* WYASwiftMaterialUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYASwiftMaterialUnitTests.swift; sourceTree = "<group>"; };
 		9523894622D70DB9006646A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				211F644622BA06C400E9E2F6 /* UIColor.swift */,
 				211F645422BA316000E9E2F6 /* UIView.swift */,
 				213CCE9622BB8BA200DDA4BE /* Dictionary.swift */,
+				95166FA32303DAE100A52662 /* WYAJSONDecode.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				9513659222E8432900A88CF5 /* WYAChooseProductLineModel.swift in Sources */,
 				9513659422E8436400A88CF5 /* WYAChooseProductLineViewController.swift in Sources */,
 				9513659622E8451900A88CF5 /* WYAChooseProductTableViewCell.swift in Sources */,
+				95166FA42303DAE100A52662 /* WYAJSONDecode.swift in Sources */,
 				9563B4D421251EA8007AC364 /* BaseNetWork.swift in Sources */,
 				95CD11B2212275C700331792 /* HomeViewController.swift in Sources */,
 				211F645722BA39E800E9E2F6 /* WYAAgentRingCell.swift in Sources */,

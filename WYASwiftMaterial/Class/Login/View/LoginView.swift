@@ -173,6 +173,11 @@ class LoginView: UIView {
     }
 
     @objc func buttonClick() {
+        self.resignFirstResponder()
         loginButtonback(usernameTF.text, passwordTF.text)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.resignFirstResponder()
     }
 }

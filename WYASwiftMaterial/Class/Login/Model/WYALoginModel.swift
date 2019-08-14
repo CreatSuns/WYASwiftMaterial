@@ -44,17 +44,15 @@ struct WYALoginDataModel : Codable {
 
 class WYALoginModel: BaseNetWork {
 
-    public class func login (_ userName : String, _ password : String, handle:@escaping (WYALoginDataModel) -> Void) {
-        let params = ["mobile":userName.replacingOccurrences(of: " ", with: ""),
+    public class func login (_ userName : String, _ password : String, success:@escaping success, failure:@escaping failure) {
+        let params:[String:Any] = ["mobile":userName.replacingOccurrences(of: " ", with: ""),
                       "pwd":password,
                       "device_type":"1",
                       "device_token":""] as [String : Any]
-
-        WYALoginModel.requestData(.post, URLString: loginUrl, paramenters: params) { (result) in
-            wyaPrint("请求结果:\(result)")
+        WYALoginModel.requestData(.post, urlString: loginUrl, parameters: params, success: { (jsonDic) in
             var model : WYALoginDataModel? = nil
             do {
-                model = try JSONDecoder().decode(WYALoginDataModel.self, from: result as! Data)
+                model = try JHJSONDecode.jhJSONdecode(WYALoginDataModel.self, from: jsonDic)
                 let agentArray:Array<WYALoginDataModel.WYALoginUserInfoModel.WYAAgentItem> = (model?.data?.agent!)!
                 guard agentArray.count >= 1 else{
                     return
@@ -63,19 +61,26 @@ class WYALoginModel: BaseNetWork {
                         item.ischoose = false
                 }
             } catch let error {
-                wyaPrint(error)
+                wyaPrint("解析错误error\(error.localizedDescription)")
             }
-            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
-            UserDefaults.standard.synchronize()
-            handle(model ?? WYALoginDataModel())
+//            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
+//            UserDefaults.standard.synchronize()
+            success(model ?? WYALoginDataModel())
+        }) { (error) in
+            wyaPrint("请求error：\(error)")
         }
     }
 
-    static func chooseProductLin(adminId:Int,handle:@escaping (Any)-> Void){
+    static func chooseProductLin(adminId:Int, success:@escaping success, failure:@escaping failure){
         let params = ["admin_id":adminId]
-        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params) { (result) in
-            handle(result)
+        WYALoginModel.requestData(.post, urlString: chooseProductLine, parameters: params, success: { (data) in
+            success(data)
+        }) { (error) in
+            wyaPrint("请求error：\(error)")
         }
+//        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params) { (result) in
+//            handle(result)
+//        }
 
     }
 

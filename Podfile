@@ -15,6 +15,7 @@ pod 'SnapKit','~>4.0.0'
 
 pod 'WYAKit'
 pod 'RealmSwift'
+pod 'IQKeyboardManagerSwift'
 #pod 'WYAKit', :path => '/Users/lishihang/Desktop/GitProject/第三方库开发/WYAKit'
 #pod 'WYAKit', :path => '/Users/lijunheng/Desktop/WYATeam/WYAOCKit'
 

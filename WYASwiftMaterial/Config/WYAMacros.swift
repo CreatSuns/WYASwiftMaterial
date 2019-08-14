@@ -35,9 +35,9 @@ let tempDir = NSHomeDirectory() + "/tmp"
 //
 //}
 //
-//func wyaUserDefaultRemoveObjectForKey(key:String){
-//    UserDefaults.standard.removeObject(forKey: key)
-//    UserDefaults.standard.synchronize()
-//}
+func wyaUserDefaultRemoveObjectForKey(key:String){
+    UserDefaults.standard.removeObject(forKey: key)
+    UserDefaults.standard.synchronize()
+}
 
 
