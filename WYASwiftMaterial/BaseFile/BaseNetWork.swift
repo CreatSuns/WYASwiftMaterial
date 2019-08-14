@@ -58,7 +58,7 @@ class BaseNetWork: NSObject {
         var headers : HTTPHeaders = ["version" : majorVersion as! String,
                                      "platform" : "ios"+UIDevice.current.systemVersion,
                                      "sign" : BaseNetWork.paramsTurnString(params)]
-        if let token = UserDefaults.standard.string(forKey: "token") {
+        if let token = UserDefaults.standard.string(forKey: AccessToken) {
             headers["token"] = token
         }
         wyaPrint("请求方式:\(method)\n请求地址:\(urlString)\n请求头:\(headers)\n请求参数:\(params)")

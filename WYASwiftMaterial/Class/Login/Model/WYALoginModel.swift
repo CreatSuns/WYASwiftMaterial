@@ -63,8 +63,8 @@ class WYALoginModel: BaseNetWork {
             } catch let error {
                 wyaPrint("解析错误error\(error.localizedDescription)")
             }
-//            UserDefaults.standard.set(model?.data?.access_token, forKey: "token")
-//            UserDefaults.standard.synchronize()
+            UserDefaults.standard.set(model?.data?.access_token, forKey: AccessToken)
+            UserDefaults.standard.synchronize()
             success(model ?? WYALoginDataModel())
         }) { (error) in
             wyaPrint("请求error：\(error)")
@@ -72,8 +72,8 @@ class WYALoginModel: BaseNetWork {
     }
 
     static func chooseProductLin(adminId:Int, success:@escaping success, failure:@escaping failure){
-        let params = ["admin_id":adminId]
-        WYALoginModel.requestData(.post, urlString: chooseProductLine, parameters: params, success: { (data) in
+//        let params = ["admin_id":adminId]
+        WYALoginModel.requestData(.post, urlString: chooseProductLine, parameters: nil, success: { (data) in
             success(data)
         }) { (error) in
             wyaPrint("请求error：\(error)")
