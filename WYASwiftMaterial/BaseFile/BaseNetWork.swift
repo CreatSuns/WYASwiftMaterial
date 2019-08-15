@@ -62,38 +62,40 @@ class BaseNetWork: NSObject {
             headers["token"] = token
         }
         wyaPrint("请求方式:\(method)\n请求地址:\(urlString)\n请求头:\(headers)\n请求参数:\(params)")
-        Alamofire.request(urlString, method: method, parameters: parameters,encoding: coding, headers:headers).responseJSON { (response) in
-            switch response.result{
-            case .success:
-                if let value = response.result.value as? [String : Any]{
-                    let status:Int = value["status"] as! Int
-                    if status == 1{
-                        wyaPrint("请求成功results:\(value)")
-                        success(value as Any)
-                    }else if status == 0 {
-                        if(value["msg"] as! String == "请先选择产品线后再继续操作"){
-                            // 回到登录界面
-                            Window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
-                        }else{
-                        UIView.wya_showCenterToast(withMessage: value["msg"] as! String)
-                        }
-                    }else if status == -1{
-                        UIView.wya_showCenterToast(withMessage: value["msg"] as! String)
+    Alamofire.request(urlString, method: method, parameters: params, encoding: coding, headers:headers).responseJSON { (response) in
+        switch response.result{
+        case .success:
+            if let value = response.result.value as? [String : Any]{
+                let status:Int = value["status"] as! Int
+                if status == 1{
+                    wyaPrint("请求成功results:\(value)")
+                    success(value as Any)
+                }else if status == 0 {
+                    if(value["msg"] as! String == "请先选择产品线后再继续操作"){
+                        // 回到登录界面
                         Window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
+                    }else{
+                        UIView.wya_showCenterToast(withMessage: value["msg"] as! String)
                     }
-
+                }else if status == -1{
+                    UIView.wya_showCenterToast(withMessage: value["msg"] as! String)
+                    Window?.rootViewController = UINavigationController.init(rootViewController: LoginViewController())
                 }
-            case .failure(let error):
-                wyaPrint("error:\(error.localizedDescription)")
-                failure(error.localizedDescription)
+
             }
+        case .failure(let error):
+            wyaPrint("error:\(error.localizedDescription)")
+            failure(error.localizedDescription)
+        }
         }
     }
 }
 
 extension BaseNetWork {
-    class func paramsTurnString(_ params : [String : Any]) -> String {
-        let dic = params.sorted { (str1, str2) -> Bool in
+    class func paramsTurnString(_ params : [String : Any]?) -> String {
+        guard (params != nil) else { return "" }
+
+        let dic = params!.sorted { (str1, str2) -> Bool in
             return str1.0 < str2.0
         }
         var arr = [String]()
@@ -125,10 +127,10 @@ extension BaseNetWork {
         let sss = arr.joined(separator: "&")
 
         let resultString = (sss + "il3qTF7xaXLsiXff4YqYCeNrsI9Ne3ev") as NSString
-        wyaPrint("加密前：\(resultString)")
+        print(resultString)
         let md5String = NSString.wya_md5With(resultString)() as String
-        wyaPrint("加密后：\(md5String)")
-        return md5String 
+
+        return md5String
     }
 }
 

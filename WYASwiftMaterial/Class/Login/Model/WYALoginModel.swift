@@ -72,16 +72,12 @@ class WYALoginModel: BaseNetWork {
     }
 
     static func chooseProductLin(adminId:Int, success:@escaping success, failure:@escaping failure){
-//        let params = ["admin_id":adminId]
-        WYALoginModel.requestData(.post, urlString: chooseProductLine, parameters: nil, success: { (data) in
+        let params = ["admin_id":adminId]
+        WYALoginModel.requestData(.post, urlString: chooseProductLine, parameters: params, success: { (data) in
             success(data)
         }) { (error) in
             wyaPrint("请求error：\(error)")
         }
-//        WYALoginModel.requestData(.post, URLString: chooseProductLine, paramenters: params) { (result) in
-//            handle(result)
-//        }
-
     }
 
 }

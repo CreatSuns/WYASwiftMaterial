@@ -121,7 +121,7 @@ extension WYAChooseProductLineViewController{
     func enterHome() {
         let model = WYALoginLocalModelTool.lookpLoginAgentListData(whereString: "isChoose=true")
         WYALoginModel.chooseProductLin(adminId: model.admin_id, success: { (data) in
-            wyaPrint(data)
+            Window?.rootViewController = RootViewController()
         }) { (error) in
 
         }
